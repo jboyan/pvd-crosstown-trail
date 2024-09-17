@@ -70,14 +70,7 @@ const Map = ({ setShowModal, isMobile }) => {
         const map = mapRef.current = new mapboxgl.Map({
             container: mapContainer.current,
             bounds: [
-                [
-                    -73.90679447981988,
-                    40.88426260944442
-                ],
-                [
-                    -74.02759930511121,
-                    40.69495574763582
-                ],
+		[-71.495732,41.782303],[-71.374274,41.846864]
             ],
             hash: true,
             pitch: 56,
