@@ -45,7 +45,7 @@ const Modal = ({ showModal, setShowModal }) => {
                       </Dialog.Title>
                       <div className="mt-2">
                         <p className="text-sm text-gray-500 mb-4">
-                          Use this interactive map for wayfinding during the Great Saunter.
+                          Use this interactive map for wayfinding along the Providence Crosstown Trail.
                         </p>
 
                         <div className='border rounded-lg p-4'>
