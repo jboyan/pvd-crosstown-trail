@@ -1,44 +1,12 @@
 {
-  "type": "FeatureCollection",
-    "features": [
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [-71.4588234, 41.8187495]
-			},
-			"properties": {
-				"name": "Panader\u00EDa El Quetzal",
-				"ele": "28.0",
-			    "description": "Panader\u00EDa El Quetzal",
-			    "type": "refreshments"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [-71.44413, 41.818]
-			},
-			"properties": {
-				"name": "Dunkin",
-				"ele": "16.0",
-			        "description": "Dunkin",
-			        "type": "refreshments"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [-71.40421, 41.82017]
-			},
-			"properties": {
-				"name": "Pedestrian Bridge",
-				"description": "Pedestrian Bridge",
-			    "ele": "11.0",
-			    "type": "refreshments"
-			}
-		}
-  ]
+"type": "FeatureCollection",
+"name": "waypoints",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "description": "Neutaconkanut Skate Park", "desc": "Turn left at the skate park (either before or after it) to reach the trail in the woods behind it.", "sym": "Alert", "type": "route-info" }, "geometry": { "type": "Point", "coordinates": [ -71.46317, 41.81135 ] } },
+{ "type": "Feature", "properties": { "description": "Vista", "sym": "Viewpoint", "type": "Viewpoint" }, "geometry": { "type": "Point", "coordinates": [ -71.46438, 41.80892 ] } },
+{ "type": "Feature", "properties": { "description": "Summit", "desc": "Nice view of downtown — the halfway point of your trek!", "sym": "Peak", "type": "route-info" }, "geometry": { "type": "Point", "coordinates": [ -71.4656, 41.81158 ] } },
+{ "type": "Feature", "properties": { "description": "Waypoint", "desc": "Cross the road to the old ski slope (now a sledding hill), then follow the walkway down, not the road.", "sym": "Alert", "type": "route-info" }, "geometry": { "type": "Point", "coordinates": [ -71.46515, 41.81172 ] } },
+{ "type": "Feature", "properties": { "description": "La cocina de Vicky", "desc": "Refuel at Vicky's Mexican food truck (https:\/\/www.facebook.com\/tucosina1\/)", "sym": "Restaurant", "type": "refreshments" }, "geometry": { "type": "Point", "coordinates": [ -71.46055, 41.82176 ] } }
+]
 }
