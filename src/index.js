@@ -6,16 +6,22 @@ import {
 } from "react-router-dom";
 
 import App from './App';
+import Home from './home';
+
 import reportWebVitals from './reportWebVitals';
 
 import '/node_modules/mapbox-gl/dist/mapbox-gl.css'
 import './index.css';
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
+    {
+	path: "/map/",
+	element: <App />,
+    },
+    {
+	path: "/",
+	element: <Home />,
+    },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
