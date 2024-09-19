@@ -1,110 +1,165 @@
 {
-"type": "FeatureCollection",
-"name": "waypoints",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [-71.46325, 41.81124]
-			},
-			"properties": {
-				"name": "Pinnacle Trail (orange) to Pond Trail (red)",
-				"type": "route-info",
-				"ele": "30.0",
-				"description": "Take your time on the Great Stone Stairs of the Pond Trail! Turn left after the stairs."
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [-71.46558, 41.80853]
-			},
-			"properties": {
-				"name": "Pinnacle Boardwalk",
-				"type": "route-info",
-				"ele": "55.0",
-				"description": "After the Pinnacle Boardwalk, turn right onto The Shortcut trail (green) to head toward the summit."
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [-71.4656, 41.81158]
-			},
-			"properties": {
-				"name": "Summit",
-				"type": "route-info",
-				"ele": "75.0",
-				"description": "Nice view of downtown \u2014 the halfway point of your trek!"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [-71.46514, 41.81172]
-			},
-			"properties": {
-				"name": "Waypoint",
-				"type": "route-info",
-				"ele": "65.0",
-				"description": "Cross the road to the old ski slope (now a sledding hill), then follow the walkway down, not the road."
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [-71.46055, 41.82176]
-			},
-			"properties": {
-				"name": "La cocina de Vicky",
-				"type": "restrooms",
-				"ele": "27.0",
-				"description": "Refuel at Vicky's Mexican food truck (https:\/\/www.facebook.com\/tucosina1\/). Port-a-potty available - ask Vicky for the combination."
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [-71.45911, 41.83314]
-			},
-			"properties": {
-				"name": "McCormick's Restaurant at Triggs",
-				"type": "refreshments",
-				"ele": "59.0",
-				"description": "Triggs is a city-owned golf course. Stop into the on-site restaurant for a bite, a drink, or to use the restrooms."
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [-71.4266, 41.83005]
-			},
-			"properties": {
-				"description": "Burger King (restrooms)",
-				"type": "refreshments",
-				"ele": "12.0"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [-71.41986, 41.83027]
-			},
-			"properties": {
-				"description": "Gantry Gardens",
-				"type": "route-info",
-				"ele": "25.0"
-			}
-		}
-
-]
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.46325,
+          41.81124
+        ]
+      },
+      "properties": {
+        "name": "Pinnacle Trail (orange) to Pond Trail (red)",
+        "type": "route-info",
+        "ele": "30.0",
+        "description": "<B>Pinnacle Trail (orange) to Pond Trail (red)</B><BR/>Take your time on the Great Stone Stairs of the Pond Trail! Turn left after the stairs."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.46558,
+          41.80853
+        ]
+      },
+      "properties": {
+        "name": "Pinnacle Boardwalk",
+        "type": "route-info",
+        "ele": "55.0",
+        "description": "<B>Pinnacle Boardwalk</B><BR/>After the Pinnacle Boardwalk, turn right onto The Shortcut trail (green) to head toward the summit."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4656,
+          41.81158
+        ]
+      },
+      "properties": {
+        "name": "Summit",
+        "type": "route-info",
+        "ele": "75.0",
+        "description": "<B>Summit</B><BR/>Nice view of downtown \u2014 the halfway point of your trek!"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.46514,
+          41.81172
+        ]
+      },
+      "properties": {
+        "name": "Waypoint",
+        "type": "route-info",
+        "ele": "65.0",
+        "description": "<B>Waypoint</B><BR/>Cross the road to the old ski slope (now a sledding hill), then follow the walkway down, not the road."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.46055,
+          41.82176
+        ]
+      },
+      "properties": {
+        "name": "La cocina de Vicky",
+        "type": "refreshments",
+        "ele": "27.0",
+        "description": "<B>La cocina de Vicky</B><BR/>Refuel at Vicky's Mexican food truck (https://www.facebook.com/tucosina1/). Port-a-potty available - ask Vicky for the combination."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.45911,
+          41.83314
+        ]
+      },
+      "properties": {
+        "name": "McCormick's Restaurant at Triggs",
+        "type": "refreshments",
+        "ele": "59.0",
+        "description": "<B>McCormick's Restaurant at Triggs</B><BR/>Triggs is a city-owned golf course. Stop into the on-site restaurant for a bite, a drink, or to use the restrooms."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4266,
+          41.83005
+        ]
+      },
+      "properties": {
+        "name": "Burger King (restrooms)",
+        "type": "refreshments",
+        "ele": "12.0",
+        "description": "<B>Burger King (restrooms)</B>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.41986,
+          41.83027
+        ]
+      },
+      "properties": {
+        "name": "Gantry Gardens",
+        "type": "route-info",
+        "ele": "25.0",
+        "description": "<B>Gantry Gardens</B>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.40433,
+          41.82074
+        ]
+      },
+      "properties": {
+        "name": "Plant City",
+        "type": "refreshments",
+        "ele": "14.0",
+        "description": "<B>Plant City</B><BR/>Drinks, vegan snacks + meals, restrooms."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.40905,
+          41.79356
+        ]
+      },
+      "properties": {
+        "name": "Gateway Center - Roger Williams Park",
+        "type": "restrooms",
+        "ele": "23.0",
+        "description": "<B>Gateway Center - Roger Williams Park</B>"
+      }
+    }
+  ]
 }
