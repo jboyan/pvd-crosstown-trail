@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-  createBrowserRouter,
-  RouterProvider,
+    createBrowserRouter, Navigate, RouterProvider,
 } from "react-router-dom";
 
 import App from './App';
 import Home from './home';
+import NotFound from './NotFound';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -15,12 +15,20 @@ import './index.css';
 
 const router = createBrowserRouter([
     {
-	path: "/map/",
-	element: <App />,
+      path:"/",
+      element: <Navigate to="/crosstown" replace />,
     },
     {
-	path: "/",
-	element: <Home />,
+  	  path: "/crosstown",
+	  element: <Home />,
+    },
+    {
+	  path: "/crosstown/map",
+	  element: <App />,
+    },
+    {
+      path: "*",  // Wildcard route for unmatched paths
+      element: <NotFound />,
     },
 ]);
 
