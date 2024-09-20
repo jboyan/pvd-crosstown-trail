@@ -1,24 +1,17 @@
 import {Box, Button, Container, Link, List, ListItem, Typography} from "@mui/material";
+import logo from '../assets/img/logo.svg'
 
 export default function Home() {
     return (
         <Container maxWidth="md" style={{textAlign: 'center', padding: '40px'}}>
-            {/* Site Header Line */}
-            {/*<header>*/}
-            {/*    <Typography variant="h6" component="div" style={{marginBottom: '20px'}}>*/}
-            {/*        The Providence Crosstown Trail*/}
-            {/*    </Typography>*/}
-            {/*</header>*/}
-
-            {/* Bold Title */}
             <Typography variant="h2" component="h1" fontWeight="bold" gutterBottom>
                 Providence Crosstown Trail
             </Typography>
 
             {/* Logo */}
-            {/*<Box display="flex" style={{marginBottom: '20px'}} justifyContent="center">*/}
-            {/*    <img src={logo} alt="Providence Crosstown Trail" style={{width: '250px', height: '250px'}}/>*/}
-            {/*</Box>*/}
+            <Box display="flex" style={{marginBottom: '20px'}} justifyContent="center">
+                <img src={logo} alt="Providence Crosstown Trail" style={{width: '250px', height: '250px'}}/>
+            </Box>
 
             {/* Paragraphs */}
             <Typography variant="h5" fontStyle={"italic"} style={{marginBottom: '20px'}}>
@@ -28,7 +21,7 @@ export default function Home() {
 
             <Button variant={"contained"} style={{marginBottom: '20px'}}
                     component="a" href="https://ppsri.org/events/walk-the-pvd-crosstown-trail-a-13-mile-urban-hike/">
-                Join our Inaugural Public Hike on Saturday, Sep. 28!
+                Join our Inaugural Public Hike on Saturday, Sep. 28
             </Button>
 
             <Typography variant="body1" style={{textAlign: 'left', marginBottom: '20px'}}>
@@ -50,7 +43,7 @@ export default function Home() {
                         </ListItem>
                     ))}
                 </List>
-                This trail was newly established in summer 2024 and is a work in progress. We welcome your feedback!
+                This trail was newly established in 2024 and is a work in progress. We welcome your feedback!
             </Typography>
 
             <Typography variant="h4" align="left">Maps</Typography>
