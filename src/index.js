@@ -7,10 +7,11 @@ import NotFound from './NotFound';
 
 import reportWebVitals from './reportWebVitals';
 
-// import '@fontsource/roboto/300.css';
-// import '@fontsource/roboto/400.css';
-// import '@fontsource/roboto/500.css';
-// import '@fontsource/roboto/700.css';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 import '/node_modules/mapbox-gl/dist/mapbox-gl.css'
 import './index.css';
 import {createTheme, CssBaseline, ThemeProvider} from "@mui/material";
