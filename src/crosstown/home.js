@@ -49,7 +49,8 @@ export default function Home() {
             <Typography variant="h4" align="left">Maps</Typography>
 
             <Box style={{margin: '40px 0'}}>
-                <iframe title="Interactive Trail Map" src="/crosstown/map" width="100%" height={550}></iframe>
+                IFRAME REMOVED
+                {/*<iframe title="Interactive Trail Map" src="/crosstown/map" width="100%" height={550}></iframe>*/}
             </Box>
 
             <Button variant={"contained"} style={{marginBottom: '20px'}}
