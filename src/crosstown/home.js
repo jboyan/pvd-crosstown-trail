@@ -66,8 +66,7 @@ export default function Home() {
                     component="a" href="">
                 View on AllTrails
             </Button>
-
-
+            
             <Typography variant="h4" style={{textAlign: 'left', marginBottom: '20px'}}>Credits</Typography>
 
             <Typography variant="body1" style={{textAlign: 'left', marginLeft: '20px', marginBottom: '20px'}}>
