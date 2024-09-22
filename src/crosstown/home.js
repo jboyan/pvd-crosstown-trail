@@ -81,7 +81,7 @@ export default function Home() {
                 • The trail was inspired by the <Link href={"https://crosstowntrail.org/"}>San Francisco Crosstown
                 Trail</Link>, created by Bob Siegel. We have also drawn inspiration from Boston's <Link
                 href={"https://www.bostontrails.org/"}>Walking City Trail</Link> and <Link
-                href={"https://www.walkworcester.org/"}>Worcester's East-West Trail</Link>.
+                href={"https://www.parkspirit.org/the-eastwest-trail"}>Worcester's East-West Trail</Link>.
             </Typography>
         </Container>
     );
