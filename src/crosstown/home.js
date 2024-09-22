@@ -62,7 +62,7 @@ export default function Home() {
                 View on Strava
             </Button>
             <br/>
-            <Button variant={"contained"} style={{marginBottom: '20px'}} disabled={true}
+            <Button variant={"contained"} style={{marginBottom: '20px'}}
                     component="a" href="https://www.alltrails.com/explore/map/providence-crosstown-trail-4a11654">
                 View on AllTrails
             </Button>
