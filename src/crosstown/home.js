@@ -63,10 +63,10 @@ export default function Home() {
             </Button>
             <br/>
             <Button variant={"contained"} style={{marginBottom: '20px'}} disabled={true}
-                    component="a" href="">
+                    component="a" href="https://www.alltrails.com/explore/map/providence-crosstown-trail-4a11654">
                 View on AllTrails
             </Button>
-            
+
             <Typography variant="h4" style={{textAlign: 'left', marginBottom: '20px'}}>Credits</Typography>
 
             <Typography variant="body1" style={{textAlign: 'left', marginLeft: '20px', marginBottom: '20px'}}>
