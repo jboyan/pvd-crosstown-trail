@@ -20,3 +20,8 @@ processes = ['app']
 memory = '2gb'
 cpu_kind = 'shared'
 cpus = 1
+
+[[services.ports]]
+handlers = ["http"]
+port = 80
+force_https = true
