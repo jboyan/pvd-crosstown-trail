@@ -19,7 +19,7 @@ export default function Home() {
                 the way!
             </Typography>
 
-            <Button variant={"contained"} style={{marginBottom: '20px'}}
+            <Button variant={"contained"} style={{marginBottom: '20px'}} target="_blank"
                     component="a" href="https://ppsri.org/events/walk-the-pvd-crosstown-trail-a-13-mile-urban-hike/">
                 Join our Inaugural Public Hike on Saturday, Sep. 28
             </Button>
@@ -31,9 +31,10 @@ export default function Home() {
                 District, South Providence, Elmwood, and Washington Park, as well as off-road paths through these
                 parks:
                 <List style={{paddingLeft: 100}}>
-                    {['Neutaconkanut Hill', 'Merino Park', 'Woonasquatucket River Greenway', 'Pleasant Valley Parkway',
-                        'Gantry Gardens', 'Waterplace Park', 'Van Leesten Memorial Bridge', 'Roger Williams Park',
-                        'Columbia Park', 'JWU Harborside Campus', 'Fields Point Wind Farm', 'Save the Bay Center'].map((park, index) => (
+                    {['Neutaconkanut Hill (start)', 'Merino Park', 'Woonasquatucket River Greenway', 'Pleasant Valley Parkway',
+                        'Gantry Gardens', 'Waterplace Park', 'Van Leesten Memorial Bridge (halfway point—you can start or end here!)',
+                        'Roger Williams Park', 'Columbia Park', 'JWU Harborside Campus', 'Fields Point Wind Farm',
+                        'Save the Bay Center (end)'].map((park, index) => (
                         <ListItem
                             style={{
                                 padding: '0px',
@@ -43,26 +44,26 @@ export default function Home() {
                         </ListItem>
                     ))}
                 </List>
-                This trail was newly established in 2024 and is a work in progress. We welcome your feedback!
+                This route was newly established in 2024 and is a work in progress. We welcome your feedback!
             </Typography>
 
             <Typography variant="h4" align="left">Maps</Typography>
 
             <Box style={{margin: '40px 0'}}>
-                <iframe title="Interactive Trail Map" src="/crosstown/map" width="100%" height={550}></iframe>
+                <iframe title="Interactive Trail Map" src="/crosstown/map" width="100%" height={500}></iframe>
             </Box>
 
-            <Button variant={"contained"} style={{marginBottom: '20px'}}
+            <Button variant={"contained"} style={{marginBottom: '20px'}} target="_blank"
                     component="a" href="/crosstown/map">
                 Interactive full-screen map
             </Button>
             <br/>
-            <Button variant={"contained"} style={{marginBottom: '20px'}}
+            <Button variant={"contained"} style={{marginBottom: '20px'}} target="_blank"
                     component="a" href="https://www.strava.com/routes/3201273282685028096">
                 View on Strava
             </Button>
             <br/>
-            <Button variant={"contained"} style={{marginBottom: '20px'}}
+            <Button variant={"contained"} style={{marginBottom: '20px'}} target="_blank"
                     component="a" href="https://www.alltrails.com/explore/map/providence-crosstown-trail-4a11654">
                 View on AllTrails
             </Button>
