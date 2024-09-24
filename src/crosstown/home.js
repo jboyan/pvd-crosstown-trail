@@ -51,10 +51,14 @@ export default function Home() {
 
             <Typography variant="body1" style={{textAlign: 'left', marginBottom: '20px'}}>
                 Follow the path using the map below. The full 13.4-mile route starts at the <Link
-                href="https://g.co/kgs/YFoSbQD">Igliozzi Rec Center (675 Plainfield Street)</Link> and ends at <Link
-                href="https://g.co/kgs/Memt3ZA">Fields Point (100 Save the Bay Drive)</Link>.
+                href="https://maps.app.goo.gl/WxWi5YJioNcs5WnX7" target="_blank">
+                Igliozzi Rec Center (675 Plainfield Street)</Link> and
+                ends at <Link
+                href="https://maps.app.goo.gl/cXzzhT19kefw8iSm6" target="_blank">
+                Fields Point (100 Save the Bay Drive)</Link>.
                 To shorten the walk, you can start or end downtown at the <Link
-                href="https://maps.app.goo.gl/r4na9uxRacCiMpEHA">Van Leesten Memorial Bridge (334 South Water
+                href="https://maps.app.goo.gl/Ev7komHb5Lsb2Pa78" target="_blank">
+                Van Leesten Memorial Bridge (334 South Water
                 Street)</Link>.
             </Typography>
 
