@@ -31,10 +31,10 @@ export default function Home() {
                 District, South Providence, Elmwood, and Washington Park, as well as off-road paths through these
                 parks:
                 <List style={{paddingLeft: 100}}>
-                    {['Neutaconkanut Hill (start)', 'Merino Park', 'Woonasquatucket River Greenway', 'Pleasant Valley Parkway',
-                        'Gantry Gardens', 'Waterplace Park', 'Van Leesten Memorial Bridge (halfway point—you can start or end here!)',
+                    {['Neutaconkanut Hill', 'Merino Park', 'Woonasquatucket River Greenway', 'Pleasant Valley Parkway',
+                        'Gantry Gardens', 'Waterplace Park', 'Van Leesten Memorial Bridge',
                         'Roger Williams Park', 'Columbia Park', 'JWU Harborside Campus', 'Fields Point Wind Farm',
-                        'Save the Bay Center (end)'].map((park, index) => (
+                        'Save the Bay Center'].map((park, index) => (
                         <ListItem
                             style={{
                                 padding: '0px',
@@ -47,7 +47,16 @@ export default function Home() {
                 This route was newly established in 2024 and is a work in progress. We welcome your feedback!
             </Typography>
 
-            <Typography variant="h4" align="left">Maps</Typography>
+            <Typography variant="h4" align="left" style={{marginBottom: '20px'}}>Maps</Typography>
+
+            <Typography variant="body1" style={{textAlign: 'left', marginBottom: '20px'}}>
+                Follow the path using the map below. The full 13.4-mile route starts at the <Link
+                href="https://g.co/kgs/YFoSbQD">Igliozzi Rec Center (675 Plainfield Street)</Link> and ends at <Link
+                href="https://g.co/kgs/Memt3ZA">Fields Point (100 Save the Bay Drive)</Link>.
+                To shorten the walk, you can start or end downtown at the <Link
+                href="https://maps.app.goo.gl/r4na9uxRacCiMpEHA">Van Leesten Memorial Bridge (334 South Water
+                Street)</Link>.
+            </Typography>
 
             <Box style={{margin: '40px 0'}}>
                 <iframe title="Interactive Trail Map" src="/crosstown/map" width="100%" height={500}></iframe>
@@ -72,7 +81,7 @@ export default function Home() {
 
             <Typography variant="body1" style={{textAlign: 'left', marginLeft: '20px', marginBottom: '20px'}}>
                 • Trail design by Justin Boyan, with help from Sarah Zurier, Amy Greenwald, Geoff Meek,
-                Magnus Thorsson, and others!
+                Magnus Thorsson, Traci Picard, Jonathan Bell, and others!
                 <br/>
                 • Thanks to Marisa Brown and the <Link href="https://ppsri.org/">Providence Preservation
                 Society</Link> for hosting a

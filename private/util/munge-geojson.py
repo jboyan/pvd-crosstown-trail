@@ -5,7 +5,7 @@
 #
 # The process for importing that route to the pvdtrails.org interactive map is:
 # 1. Export Strava to GPX
-# 2. Run https://www.alltrails.com/converter to generate a geojson file
+# 2. Run https://www.alltrails.com/converter to generate a GeoJSON Track file
 # 3. Run this script to munge that geojson into points.json and route.json as
 #    expected by the pvdtrails.org map app.
 
@@ -14,14 +14,15 @@ import json
 
 # POI types known to the map app are:
 #   'restrooms', 'route-info', 'refreshments', 'mile-marker', 'start and finish'
-POI_TYPE_MAP = {'Transition Zone':'route-info',
+POI_TYPE_MAP = {'Transition Zone': 'route-info',
                 'Peak': 'route-info',
                 'Alert': 'route-info',
                 'Restaurant': 'refreshments',
+                'Pharmacy': 'refreshments',
                 'Park': 'route-info',
                 'Restroom': 'restrooms',
                 }
-input = '/tmp/alltrails.js'
+input = '/Users/jab/Downloads/Providence-Crosstown-Trail-3-.js'
 output_dir = '../../src/assets/data'
 
 # read json from input file
@@ -37,7 +38,8 @@ pois = []
 routes = []
 for feature in input_data['features']:
     # rename the 'desc' attribute to 'description' as the map app expects
-    feature['properties']['description'] = "<B>" + feature['properties']['name'] + "</B>"
+    feature['properties']['description'] = "<B>" + feature['properties'][
+        'name'] + "</B>"
     if 'desc' in feature['properties']:
         feature['properties']['description'] += "<BR/>" + feature['properties']['desc']
         del feature['properties']['desc']

@@ -6,6 +6,22 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -71.46247,
+          41.8114
+        ]
+      },
+      "properties": {
+        "name": "Igliozzi Rec Center \u2014 Start",
+        "type": "route-info",
+        "ele": "26.0",
+        "description": "<B>Igliozzi Rec Center \u2014 Start</B><BR/>Welcome to the Providence Crosstown Trail! Start by walking behind and around the skate park. Behind the skate park, go up the short grassy slope to join the park trail, and turn left."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -71.46325,
           41.81124
         ]
@@ -150,6 +166,22 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -71.41458,
+          41.80499
+        ]
+      },
+      "properties": {
+        "name": "Walgreens",
+        "type": "refreshments",
+        "ele": "34.0",
+        "description": "<B>Walgreens</B>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -71.40905,
           41.79356
         ]
@@ -159,6 +191,54 @@
         "type": "restrooms",
         "ele": "23.0",
         "description": "<B>Gateway Center - Roger Williams Park</B>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4147,
+          41.78635
+        ]
+      },
+      "properties": {
+        "name": "Left turn before road bridge",
+        "type": "route-info",
+        "ele": "18.0",
+        "description": "<B>Left turn before road bridge</B><BR/>Turn left on the footpath, keeping the lake on your right."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.40709,
+          41.78653
+        ]
+      },
+      "properties": {
+        "name": "Up and out of the park",
+        "type": "route-info",
+        "ele": "21.0",
+        "description": "<B>Up and out of the park</B><BR/>Instead of following the trail around its U-turn, continue straight up the grassy hill and cross the street onto Marion Ave."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.38112,
+          41.78625
+        ]
+      },
+      "properties": {
+        "name": "Fields Point \u2014 Finish",
+        "type": "route-info",
+        "ele": "1.0",
+        "description": "<B>Fields Point \u2014 Finish</B><BR/>Congratulations!"
       }
     }
   ]
