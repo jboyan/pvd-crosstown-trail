@@ -88,14 +88,17 @@ export default function Home() {
                 Magnus Thorsson, Traci Picard, Jonathan Bell, and others!
                 <br/>
                 • Thanks to Marisa Brown and the <Link href="https://ppsri.org/">Providence Preservation
-                Society</Link> for hosting a
-                brainstorming workshop about the trail at
-                their April <i>Hacking Heritage</i> event.
+                Society</Link> for hosting a brainstorming workshop about the trail at
+                their April 2024 <i>Hacking Heritage</i> event, as well as organizing the inaugural group hike
+                in September 2024.
                 <br/>
                 • The trail was inspired by the <Link href={"https://crosstowntrail.org/"}>San Francisco Crosstown
                 Trail</Link>, created by Bob Siegel. We have also drawn inspiration from Boston's <Link
                 href={"https://www.bostontrails.org/"}>Walking City Trail</Link> and <Link
                 href={"https://www.parkspirit.org/the-eastwest-trail"}>Worcester's East-West Trail</Link>.
+                <br/>
+                • Interactive map code by Chris Whong, developed for NYC's <Link
+                href={"https://shorewalkers.org/great-saunter/"}>Great Saunter</Link>.
             </Typography>
         </Container>
     );
