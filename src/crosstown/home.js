@@ -71,14 +71,19 @@ export default function Home() {
                 Interactive full-screen map
             </Button>
             <br/>
-            <Button variant={"contained"} style={{marginBottom: '20px'}} target="_blank"
+            <Button variant={"outlined"} style={{marginBottom: '20px'}} target="_blank"
                     component="a" href="https://www.strava.com/routes/3201273282685028096">
                 View on Strava
             </Button>
             <br/>
-            <Button variant={"contained"} style={{marginBottom: '20px'}} target="_blank"
+            <Button variant={"outlined"} style={{marginBottom: '20px'}} target="_blank"
                     component="a" href="https://www.alltrails.com/explore/map/providence-crosstown-trail-4a11654">
                 View on AllTrails
+            </Button>
+            <br/>
+            <Button variant={"outlined"} style={{marginBottom: '20px'}} target="_blank"
+                    component="a" href="https://connect.garmin.com/modern/course/310808963">
+                View on Garmin Connect
             </Button>
 
             <Typography variant="h4" style={{textAlign: 'left', marginBottom: '20px'}}>Credits</Typography>
