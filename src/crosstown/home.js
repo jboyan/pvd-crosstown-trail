@@ -1,4 +1,5 @@
 import {Box, Button, Container, Link, List, ListItem, Typography} from "@mui/material";
+import {Link as RouterLink} from 'react-router-dom';
 import logo from '../assets/img/logo.svg'
 
 export default function Home() {
@@ -19,10 +20,31 @@ export default function Home() {
                 the way!
             </Typography>
 
-            <Button variant={"contained"} style={{marginBottom: '20px'}} target="_blank"
-                    component="a" href="https://ppsri.org/events/walk-the-pvd-crosstown-trail-a-13-mile-urban-hike/">
-                Join our second Public Hike on Saturday, September 27
-            </Button>
+            <Box
+                border={2}
+                borderColor="primary.main"
+                borderRadius={2}
+                padding={3}
+                marginBottom={3}
+                display="inline-block"
+                textAlign="center"
+            >
+                <Typography variant="body1" gutterBottom>
+                    Experience the Crosstown Trail with others on Saturday, September 27! We will actually be walking
+                    a variant of the route—the <Link component={RouterLink} to="/crosstown-west"><b>PVD Crosstown Trail
+                    West End edition</b></Link>—in order to make stops at two artist events happening that day.
+                </Typography>
+                <Box mb={2}/>
+                <Button
+                    variant="contained"
+                    style={{marginBottom: '10px'}}
+                    target="_blank"
+                    component="a"
+                    href="https://ppsri.org/events/walk-the-pvd-crosstown-trail-a-13-mile-urban-hike/"
+                >
+                    Join our second Public Hike on Saturday, September 27
+                </Button>
+            </Box>
 
             <Typography variant="body1" style={{textAlign: 'left', marginBottom: '20px'}}>
                 Inspired by the San Francisco Crosstown Trail, this 13-mile walking route traverses the city of

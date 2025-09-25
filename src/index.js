@@ -16,7 +16,7 @@ import '/node_modules/mapbox-gl/dist/mapbox-gl.css'
 import './index.css';
 import {createTheme, CssBaseline, ThemeProvider} from "@mui/material";
 import Home from "./crosstown/home";
-
+import CrosstownWest from './crosstown/CrosstownWest';
 
 const theme = createTheme({
     palette: {
@@ -65,6 +65,10 @@ const router = createBrowserRouter([
     {
         path: "/crosstown/map",
         element: <App/>,
+    },
+    {
+        path: "/crosstown-west",
+        element: <CrosstownWest/>,
     },
     {
         path: "*",  // Wildcard route for unmatched paths
