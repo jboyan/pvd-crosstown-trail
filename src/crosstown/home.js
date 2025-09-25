@@ -21,7 +21,7 @@ export default function Home() {
 
             <Button variant={"contained"} style={{marginBottom: '20px'}} target="_blank"
                     component="a" href="https://ppsri.org/events/walk-the-pvd-crosstown-trail-a-13-mile-urban-hike/">
-                Join our second Public Hike on &nbsp;<strike>Sunday, April 6!</strike> (to be rescheduled for May)
+                Join our second Public Hike on Saturday, September 27
             </Button>
 
             <Typography variant="body1" style={{textAlign: 'left', marginBottom: '20px'}}>
