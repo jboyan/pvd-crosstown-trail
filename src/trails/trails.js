@@ -43,7 +43,7 @@ export const trails = [
       mapsHeading: 'Maps',
       mapsIntroPrefix:
         'Follow the path using the map below. The full 13.4-mile route starts at the Igliozzi Rec Center (675 Plainfield Street) and ends at Fields Point (100 Save the Bay Drive). To shorten the walk, you can start or end downtown at Van Leesten Memorial Bridge (334 South Water Street).',
-      mapIframeSrc: '/trails/pvd-crosstown-trail/map',
+      mapIframeSrc: '/trails/pvd-crosstown-trail/map?embedded=true',
       externalButtons: [
         {
           label: 'Interactive full-screen map',
@@ -68,13 +68,15 @@ export const trails = [
       ],
       groupWalksHeading: 'Group Walks',
       groupWalksBody:
-        'The Providence Preservation Society organized group walks of the trail in 2024 and 2025. Experience the Crosstown Trail with others on Saturday, September 27! We will actually be walking a variant of the route—{{westEdition}}—in order to make stops at two artist events happening that day.',
+        'The Providence Preservation Society organized group walks of the {{crosstownTrail}} in 2024 and the {{westEndEdition}} in 2025. Follow {{eventListings}} to find out about our 2026 plans!',
       groupWalksCta: {
         label: 'Join our second Public Hike on Saturday, September 27',
         href:
           'https://ppsri.org/events/walk-the-pvd-crosstown-trail-a-13-mile-urban-hike/',
         // Internal link to the West End landing page.
         westEditionHref: '/trails/pvd-crosstown-west',
+        crosstownHref: '/trails/pvd-crosstown-trail',
+        eventListingsHref: 'https://ppsri.org/upcoming-events/',
       },
       creditsHeading: 'Credits',
       creditsLines: [

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
-import { Box, Button, Container, Typography } from '@mui/material';
+import { Box, Button, Container, Typography, Link } from '@mui/material';
 
 import { getFeaturedTrail, trails } from './trails';
 import logo from '../assets/img/logo.svg';
@@ -67,7 +67,7 @@ const TrailsHomePage = () => {
   const otherTrails = trails.filter((t) => t.slug !== featured?.slug);
 
   const intro = featured?.home?.subtitle;
-  const creditsLine = featured?.home?.creditsLines?.[0];
+  const homeCopy = featured?.home;
 
   return (
     <Container maxWidth="md" style={{ textAlign: 'center', padding: '40px' }}>
@@ -116,14 +116,52 @@ const TrailsHomePage = () => {
         )}
       </Box>
 
-      {creditsLine && (
-        <Typography
-          variant="body1"
-          style={{ marginTop: 44, textAlign: 'left' }}
-        >
-          • {creditsLine}
+      {homeCopy?.groupWalksHeading && (
+        <Typography variant="h4" style={{ textAlign: 'left', marginBottom: '20px', marginTop: 40 }}>
+          {homeCopy.groupWalksHeading}
         </Typography>
       )}
+
+      {homeCopy?.groupWalksBody && (
+        <Typography variant="body1" style={{ textAlign: 'left', marginLeft: '20px', marginBottom: '20px' }}>
+          {(() => {
+            const crosstownHref = homeCopy.groupWalksCta?.crosstownHref;
+            const westHref = homeCopy.groupWalksCta?.westEditionHref;
+            const listingsHref = homeCopy.groupWalksCta?.eventListingsHref;
+
+            if (!crosstownHref || !westHref || !listingsHref) {
+              return homeCopy.groupWalksBody;
+            }
+
+            const parts = homeCopy.groupWalksBody.split(/(\{\{crosstownTrail\}\}|\{\{westEndEdition\}\}|\{\{eventListings\}\})/g);
+            return parts.map((part, idx) => {
+              if (part === '{{crosstownTrail}}') {
+                return (
+                  <Link key={`gw-crosstown-${idx}`} component={RouterLink} to={crosstownHref}>
+                    <b>Providence Crosstown Trail</b>
+                  </Link>
+                );
+              }
+              if (part === '{{westEndEdition}}') {
+                return (
+                  <Link key={`gw-west-${idx}`} component={RouterLink} to={westHref}>
+                    <b>West End Edition</b>
+                  </Link>
+                );
+              }
+              if (part === '{{eventListings}}') {
+                return (
+                  <Link key={`gw-events-${idx}`} href={listingsHref} target="_blank" rel="noreferrer">
+                    their event listings
+                  </Link>
+                );
+              }
+              return <React.Fragment key={`gw-text-${idx}`}>{part}</React.Fragment>;
+            });
+          })()}
+        </Typography>
+      )}
+
     </Container>
   );
 };

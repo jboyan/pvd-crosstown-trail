@@ -18,6 +18,7 @@ const TrailMapPage = () => {
   const [searchParams] = useSearchParams();
   const isMobile = searchParams.get('mobile') === 'true';
   const isStaticCapture = searchParams.get('static') === 'true';
+  const isEmbedded = searchParams.get('embedded') === 'true';
 
   const [splashModalDismissed, setSplashModalDismissed] = useLocalStorage(
     'splashModalDismissed',
@@ -73,14 +74,18 @@ const TrailMapPage = () => {
     <>
       {!isStaticCapture && (
         <>
-          <div className="absolute z-20 top-2 right-2">
-            <Button component={RouterLink} to="/" variant="outlined" size="small">
-              ← Back
-            </Button>
-          </div>
-          <div className="absolute z-20 h-14 w-14 top-2 left-2">
-            <img src={logo} alt="logo" />
-          </div>
+          {!isEmbedded && (
+            <div className="absolute z-20 top-2 right-2">
+              <Button component={RouterLink} to="/" variant="outlined" size="small">
+                ← Back
+              </Button>
+            </div>
+          )}
+          {!isEmbedded && (
+            <div className="absolute z-20 h-14 w-14 top-2 left-2">
+              <img src={logo} alt="logo" />
+            </div>
+          )}
         </>
       )}
       <Map

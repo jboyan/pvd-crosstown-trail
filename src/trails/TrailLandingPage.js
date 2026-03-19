@@ -3,9 +3,6 @@ import { useParams, Link as RouterLink } from 'react-router-dom';
 
 import { Box, Button, Container, List, ListItem, Typography, Link } from '@mui/material';
 
-import logo from '../assets/img/logo.svg';
-import pxtWest from '../assets/img/pxt-west.png';
-
 import { getTrailBySlug } from './trails';
 import PhotoCarousel from './PhotoCarousel';
 
@@ -55,11 +52,7 @@ const TrailLandingPage = () => {
         {copy?.headline || trail.displayName}
       </Typography>
 
-      <Box display="flex" style={{ marginBottom: '20px' }} justifyContent="center">
-        <img src={logo} alt={trail.displayName} style={{ width: '250px', height: '250px' }} />
-      </Box>
-
-      {copy?.subtitle && (
+      {copy?.subtitle && trail.slug !== 'pvd-crosstown-trail' && (
         <Typography variant="h5" fontStyle="italic" style={{ marginBottom: '20px' }}>
           {copy.subtitle}
         </Typography>
@@ -121,23 +114,13 @@ const TrailLandingPage = () => {
         </div>
       ))}
 
-      {copy?.staticRouteImage?.src && (
-        <Box style={{ margin: '40px 0' }}>
-          <img
-            src={copy.staticRouteImage.src || pxtWest}
-            alt={copy.staticRouteImage.alt || 'Trail route map'}
-            style={{ width: '100%', height: 'auto', maxWidth: '100%' }}
-          />
-        </Box>
-      )}
-
-      {copy?.groupWalksHeading && (
+      {copy?.groupWalksHeading && trail.slug !== 'pvd-crosstown-trail' && (
         <Typography variant="h4" style={{ textAlign: 'left', marginBottom: '20px' }}>
           {copy.groupWalksHeading}
         </Typography>
       )}
 
-      {copy?.groupWalksBody && (
+      {copy?.groupWalksBody && trail.slug !== 'pvd-crosstown-trail' && (
         <Typography variant="body1" style={{ textAlign: 'left', marginLeft: '20px', marginBottom: '20px' }}>
           {(() => {
             const token = '{{westEdition}}';
@@ -160,7 +143,7 @@ const TrailLandingPage = () => {
         </Typography>
       )}
 
-      {copy?.groupWalksCta?.label && (
+      {copy?.groupWalksCta?.label && trail.slug !== 'pvd-crosstown-trail' && (
         <Button
           variant="contained"
           style={{ marginBottom: '10px', marginLeft: '20px' }}
