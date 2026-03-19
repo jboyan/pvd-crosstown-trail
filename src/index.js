@@ -50,12 +50,16 @@ const router = createBrowserRouter([
         element: <TrailsHomePage/>,
     },
     {
-        path: "/trails/:slug",
-        element: <TrailLandingPage/>,
+        path: "/pvd",
+        element: <Navigate to="/trails/pvd-crosstown-trail" replace/>,
     },
     {
-        path: "/trails/:slug/map",
-        element: <TrailMapPage/>,
+        path: "/trails/pvd-crosstown",
+        element: <Navigate to="/trails/pvd-crosstown-trail" replace/>,
+    },
+    {
+        path: "/trails/pvd-crosstown/map",
+        element: <Navigate to="/trails/pvd-crosstown-trail/map" replace/>,
     },
     {
         path: "/loop",
@@ -67,15 +71,23 @@ const router = createBrowserRouter([
     },
     {
         path: "/crosstown",
-        element: <Navigate to="/" replace/>,
+        element: <Navigate to="/trails/pvd-crosstown-trail" replace/>,
     },
     {
         path: "/crosstown/map",
-        element: <Navigate to="/trails/pvd-crosstown/map" replace/>,
+        element: <Navigate to="/trails/pvd-crosstown-trail/map" replace/>,
     },
     {
         path: "/crosstown-west",
         element: <Navigate to="/trails/pvd-crosstown-west" replace/>,
+    },
+    {
+        path: "/trails/:slug",
+        element: <TrailLandingPage/>,
+    },
+    {
+        path: "/trails/:slug/map",
+        element: <TrailMapPage/>,
     },
     {
         path: "*",  // Wildcard route for unmatched paths

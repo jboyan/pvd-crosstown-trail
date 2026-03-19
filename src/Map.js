@@ -11,8 +11,10 @@ import FakeNavigator from "./util/fake-navigator.js";
 const Map = ({ setShowModal, isMobile, routeGeoJson, pointsGeoJson, bounds }) => {
     const [mapState, setMapState] = useState('FREE')
     const [userLocation, setUserLocation] = useState()
+    const [isFullscreen, setIsFullscreen] = useState(false)
 
     const mapContainer = useRef(null);
+    const fullscreenContainer = useRef(null);
     const mapRef = useRef(null);
     // closure issues prevent us from accessing state in some callbacks, so use refs to make sure we can get them
     const mapStateRef = useRef();
@@ -57,6 +59,44 @@ const Map = ({ setShowModal, isMobile, routeGeoJson, pointsGeoJson, bounds }) =>
             setMapState('FREE')
         }
     }
+
+    const handleFullscreenButtonClick = () => {
+        const container = fullscreenContainer.current;
+        if (!container) return;
+
+        const doc = document;
+        const inFullscreen = doc.fullscreenElement || doc.webkitFullscreenElement;
+
+        if (inFullscreen) {
+            if (doc.exitFullscreen) {
+                doc.exitFullscreen();
+            } else if (doc.webkitExitFullscreen) {
+                doc.webkitExitFullscreen();
+            }
+            return;
+        }
+
+        if (container.requestFullscreen) {
+            container.requestFullscreen();
+        } else if (container.webkitRequestFullscreen) {
+            container.webkitRequestFullscreen();
+        }
+    }
+
+    useEffect(() => {
+        const syncFullscreenState = () => {
+            const doc = document;
+            setIsFullscreen(Boolean(doc.fullscreenElement || doc.webkitFullscreenElement));
+        };
+
+        document.addEventListener('fullscreenchange', syncFullscreenState);
+        document.addEventListener('webkitfullscreenchange', syncFullscreenState);
+
+        return () => {
+            document.removeEventListener('fullscreenchange', syncFullscreenState);
+            document.removeEventListener('webkitfullscreenchange', syncFullscreenState);
+        };
+    }, []);
 
     // initialize the map
     useEffect(() => {
@@ -176,7 +216,7 @@ const Map = ({ setShowModal, isMobile, routeGeoJson, pointsGeoJson, bounds }) =>
     const locationArrowColorClass = mapState === 'CENTER' ? 'text-blue-400' : ''
 
     return (
-        <>
+        <div ref={fullscreenContainer} style={{ height: '100%', width: '100%', position: 'relative' }}>
             <div className='absolute bottom-12 right-2.5 z-10'>
             <div className=''>
                 <div className="mapboxgl-ctrl mapboxgl-ctrl-group">
@@ -184,6 +224,18 @@ const Map = ({ setShowModal, isMobile, routeGeoJson, pointsGeoJson, bounds }) =>
                         setShowModal(true)
                     }}>
                         <span><i className="fa-solid fa-circle-question"></i></span>
+                    </button>
+                </div>
+            </div>
+            <div className='mt-3'>
+                <div className="mapboxgl-ctrl mapboxgl-ctrl-group">
+                    <button
+                        className="mapboxgl-ctrl-compass"
+                        type="button"
+                        aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+                        onClick={handleFullscreenButtonClick}
+                    >
+                        <span><i className={`fa-solid ${isFullscreen ? 'fa-compress' : 'fa-expand'}`}></i></span>
                     </button>
                 </div>
             </div>
@@ -199,7 +251,7 @@ const Map = ({ setShowModal, isMobile, routeGeoJson, pointsGeoJson, bounds }) =>
             </div>
 
             <div id="map" ref={mapContainer} className="map-container" />
-        </>
+        </div>
     )
 }
 

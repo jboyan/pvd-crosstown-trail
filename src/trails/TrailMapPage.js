@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams, useSearchParams } from 'react-router-dom';
+import { Link as RouterLink, useParams, useSearchParams } from 'react-router-dom';
 
 import Modal from '../Modal';
 import SplashModal from '../SplashModal';
@@ -37,6 +37,11 @@ const TrailMapPage = () => {
   if (!trail.map) {
     return (
       <Container maxWidth="md" style={{ padding: 24, textAlign: 'center' }}>
+        <Box display="flex" justifyContent="flex-start" mb={2}>
+          <Button component={RouterLink} to="/" variant="outlined">
+            ← Back to Trails
+          </Button>
+        </Box>
         <Box display="flex" justifyContent="center" mb={2}>
           <img src={logo} alt="logo" style={{ width: 120, height: 120 }} />
         </Box>
@@ -65,6 +70,11 @@ const TrailMapPage = () => {
 
   return (
     <>
+      <div className="absolute z-20 top-2 right-2">
+        <Button component={RouterLink} to="/" variant="outlined" size="small">
+          ← Back
+        </Button>
+      </div>
       <div className="absolute z-20 h-14 w-14 top-2 left-2">
         <img src={logo} alt="logo" />
       </div>

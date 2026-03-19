@@ -7,15 +7,15 @@ import pxtWest from '../assets/img/pxt-west.png';
 // For trails where route/POIs aren't provided yet, `map` is null (the UI will show a coming-soon panel).
 export const trails = [
   {
-    slug: 'pvd-crosstown',
+    slug: 'pvd-crosstown-trail',
     displayName: 'Providence Crosstown Trail',
     featuredOnHome: true,
     // Used for the short alias routes like `/loop` and `/west`.
-    shortAlias: null,
+    shortAlias: 'pvd',
     home: {
       headline: 'Providence Crosstown Trail',
       subtitle:
-        'A big walk across a small city, from summit to shore, with neighborhood and park gems along the way!',
+        'Big walks across a small city, from summit to shore, with neighborhood and park gems along the way!',
       intro:
         'Inspired by the San Francisco Crosstown Trail, this 13-mile walking route traverses the city of Providence, visiting both well-known landmarks and quiet neighborhoods. Follow the sidewalks of Silver Lake, Hartford, Olneyville, Manton, Mt. Pleasant, Smith Hill, downtown, the Jewelry District, South Providence, Elmwood, and Washington Park, as well as off-road paths through these parks:',
       parks: [
@@ -37,9 +37,13 @@ export const trails = [
       mapsHeading: 'Maps',
       mapsIntroPrefix:
         'Follow the path using the map below. The full 13.4-mile route starts at the Igliozzi Rec Center (675 Plainfield Street) and ends at Fields Point (100 Save the Bay Drive). To shorten the walk, you can start or end downtown at Van Leesten Memorial Bridge (334 South Water Street).',
-      mapIframeSrc: '/trails/pvd-crosstown/map',
+      mapIframeSrc: '/trails/pvd-crosstown-trail/map',
       externalButtons: [
-        { label: 'Interactive full-screen map', href: '/trails/pvd-crosstown/map', variant: 'contained' },
+        {
+          label: 'Interactive full-screen map',
+          href: '/trails/pvd-crosstown-trail/map',
+          variant: 'contained',
+        },
         {
           label: 'View on Strava',
           href: 'https://www.strava.com/routes/3201273282685028096',

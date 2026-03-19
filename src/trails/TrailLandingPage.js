@@ -45,6 +45,12 @@ const TrailLandingPage = () => {
 
   return (
     <Container maxWidth="md" style={{ textAlign: 'center', padding: '40px' }}>
+      <Box display="flex" justifyContent="flex-start" style={{ marginBottom: 12 }}>
+        <Button component={RouterLink} to="/" variant="outlined">
+          ← Back to Trails
+        </Button>
+      </Box>
+
       <Typography variant="h2" component="h1" fontWeight="bold" gutterBottom>
         {copy?.headline || trail.displayName}
       </Typography>
