@@ -1,9 +1,12 @@
 import points from '../assets/data/points.json';
 import route from '../assets/data/route.json';
+import westEndRoute from '../assets/data/pvd-crosstown-west-route.json';
+import westEndPoints from '../assets/data/pvd-crosstown-west-points.json';
 
 import pxtWest from '../assets/img/pxt-west.png';
 import pvdCrosstownStaticMap from '../assets/img/pvd-crosstown-static-map.png';
 import { pvdCrosstownTrailPhotos } from '../assets/img/trails/pvd-crosstown-trail/photos';
+import { pvdCrosstownWestPhotos } from '../assets/img/trails/pvd-crosstown-west/photos';
 
 // Trail registry: everything the UI needs to render a trail lives here.
 // For trails where route/POIs aren't provided yet, `map` is null (the UI will show a coming-soon panel).
@@ -103,14 +106,9 @@ export const trails = [
     shortAlias: 'west',
     landing: {
       headline: 'Providence Crosstown Trail—West End Edition',
-      photos: [pxtWest],
-      cta: {
-        label: 'Walk this route with the PPS on Saturday, September 27',
-        href:
-          'https://ppsri.org/events/walk-the-pvd-crosstown-trail-a-13-mile-urban-hike/',
-      },
+      photos: pvdCrosstownWestPhotos,
       body:
-        'This "West End" variant of the Providence Crosstown Trail heads east from Olneyville through Providence’s West End, down to Roger Williams Park and the waterfront. This 12-mile route enables a stop at f/k/a Columbus Square on Elmwood Avenue, where a Providence Commemoration Labs performance event is happening on our walk day.',
+        'This 12-mile "West End" variant of the Providence Crosstown Trail heads east from Olneyville through Providence’s West End, down to Roger Williams Park and the waterfront.',
       parks: [
         'Neutaconkanut Hill',
         'Merino Park',
@@ -126,8 +124,9 @@ export const trails = [
         'Save the Bay Center',
       ],
       mapsHeading: 'Maps',
-      mapsDescription:
-        "We don't have an interactive web map available for this route yet, but if you have Strava, you can follow along using this link:",
+      mapsIntroPrefix:
+        'Explore this route with the interactive map below.',
+      mapIframeSrc: '/trails/pvd-crosstown-west/map?embedded=true',
       staticRouteImage: {
         src: pxtWest,
         alt: 'Crosstown West Route Map',
@@ -140,7 +139,14 @@ export const trails = [
       routeShortenText:
         'The full walk is 12 miles long. For a shorter walk, you can start or end at our lunch spot, which will be approximately at noon at Urban Greens Co-op Market (93 Cranston Street).',
     },
-    map: null,
+    map: {
+      routeGeoJson: westEndRoute,
+      pointsGeoJson: westEndPoints,
+      bounds: [
+        [-71.469568, 41.78265],
+        [-71.378472, 41.82476],
+      ],
+    },
   },
   {
     slug: 'pvd-crosstown-loop',

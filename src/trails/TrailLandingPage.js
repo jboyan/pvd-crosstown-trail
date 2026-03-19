@@ -6,6 +6,26 @@ import { Box, Button, Container, List, ListItem, Typography, Link } from '@mui/m
 import { getTrailBySlug } from './trails';
 import PhotoCarousel from './PhotoCarousel';
 
+const getStandardExternalLabel = (href, fallbackLabel) => {
+  const value = (href || '').toLowerCase();
+  if (value.includes('strava.com')) return 'View on Strava';
+  if (value.includes('alltrails.com')) return 'View on Alltrails';
+  if (value.includes('garmin.com') || value.includes('connect.garmin.com')) {
+    return 'View on Garmin Connect';
+  }
+  return fallbackLabel;
+};
+
+const isStandardExternalProvider = (href) => {
+  const value = (href || '').toLowerCase();
+  return (
+    value.includes('strava.com') ||
+    value.includes('alltrails.com') ||
+    value.includes('garmin.com') ||
+    value.includes('connect.garmin.com')
+  );
+};
+
 const ParksList = ({ parks }) => {
   if (!parks?.length) return null;
   return (
@@ -88,6 +108,16 @@ const TrailLandingPage = () => {
         </Box>
       )}
 
+      <Button
+        variant="contained"
+        style={{ marginBottom: '12px' }}
+        target="_blank"
+        component="a"
+        href={`/trails/${trail.slug}/map`}
+      >
+        Interactive Full-Screen Map
+      </Button>
+
       {copy?.cta && (
         <Button
           variant="contained"
@@ -100,16 +130,18 @@ const TrailLandingPage = () => {
         </Button>
       )}
 
-      {(copy?.externalButtons || []).map((btn) => (
-        <div key={btn.href} style={{ marginBottom: 8 }}>
+      {(copy?.externalButtons || [])
+        .filter((btn) => btn.href !== `/trails/${trail.slug}/map`)
+        .map((btn) => (
+        <div key={btn.href} style={{ marginBottom: 12 }}>
           <Button
-            variant={btn.variant === 'contained' ? 'contained' : 'outlined'}
-            style={{ marginBottom: '20px' }}
+            variant={isStandardExternalProvider(btn.href) ? 'outlined' : (btn.variant === 'contained' ? 'contained' : 'outlined')}
+            style={{ marginBottom: 0 }}
             target="_blank"
             component="a"
             href={btn.href}
           >
-            {btn.label}
+            {getStandardExternalLabel(btn.href, btn.label)}
           </Button>
         </div>
       ))}

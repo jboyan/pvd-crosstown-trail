@@ -1,0 +1,226 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.46247,
+          41.8114
+        ]
+      },
+      "properties": {
+        "name": "Igliozzi Rec Center \u2014 Start",
+        "type": "start and finish",
+        "description": "<B>Igliozzi Rec Center \u2014 Start</B><BR/>Welcome to the Providence Crosstown Trail! Start by walking behind and around the skate park. Behind the skate park, go up the short grassy slope to join the park trail, and turn left.",
+        "sourceType": "Transition Zone",
+        "sourceSymbol": "Transition Zone"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.46325,
+          41.81124
+        ]
+      },
+      "properties": {
+        "name": "Pinnacle Trail (orange) to Pond Trail (red)",
+        "type": "route-info",
+        "description": "<B>Pinnacle Trail (orange) to Pond Trail (red)</B><BR/>Take your time on the Great Stone Stairs of the Pond Trail! Turn left after the stairs.",
+        "sourceType": "Transition Zone",
+        "sourceSymbol": "Transition Zone"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.46558,
+          41.80853
+        ]
+      },
+      "properties": {
+        "name": "Pinnacle Boardwalk",
+        "type": "route-info",
+        "description": "<B>Pinnacle Boardwalk</B><BR/>After the Pinnacle Boardwalk, turn right onto The Shortcut trail (green) to head toward the summit.",
+        "sourceType": "Transition Zone",
+        "sourceSymbol": "Transition Zone"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4656,
+          41.81158
+        ]
+      },
+      "properties": {
+        "name": "Summit",
+        "type": "route-info",
+        "description": "<B>Summit</B><BR/>Nice view of downtown \u2014 the halfway point of your trek!",
+        "sourceType": "Peak",
+        "sourceSymbol": "Peak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.46514,
+          41.81172
+        ]
+      },
+      "properties": {
+        "name": "Waypoint",
+        "type": "route-info",
+        "description": "<B>Waypoint</B><BR/>Cross the road to the old ski slope (now a sledding hill), then follow the walkway down, not the road.",
+        "sourceType": "Alert",
+        "sourceSymbol": "Alert"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.46057,
+          41.8217
+        ]
+      },
+      "properties": {
+        "name": "La cocina de Vicky",
+        "type": "refreshments",
+        "description": "<B>La cocina de Vicky</B><BR/>Refuel at Vicky's Mexican food truck (https://www.facebook.com/tucosina1/). Port-a-potty available - ask Vicky for the combination.",
+        "sourceType": "Restaurant",
+        "sourceSymbol": "Restaurant"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.42401,
+          41.81597
+        ]
+      },
+      "properties": {
+        "name": "Lunch - Urban Greens",
+        "type": "refreshments",
+        "description": "<B>Lunch - Urban Greens</B>",
+        "sourceType": "Grocery",
+        "sourceSymbol": "Grocery"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.42775,
+          41.80462
+        ]
+      },
+      "properties": {
+        "name": "West End Rec Center",
+        "type": "restrooms",
+        "description": "<B>West End Rec Center</B>",
+        "sourceType": "Restroom",
+        "sourceSymbol": "Restroom"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.42567,
+          41.7971
+        ]
+      },
+      "properties": {
+        "name": "f/k/a Columbus Square",
+        "type": "route-info",
+        "description": "<B>f/k/a Columbus Square</B>",
+        "sourceType": "Art",
+        "sourceSymbol": "Art"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.40979,
+          41.79362
+        ]
+      },
+      "properties": {
+        "name": "RWP Welcome Center",
+        "type": "restrooms",
+        "description": "<B>RWP Welcome Center</B>",
+        "sourceType": "Restroom",
+        "sourceSymbol": "Restroom"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4147,
+          41.78635
+        ]
+      },
+      "properties": {
+        "name": "Left turn before road bridge",
+        "type": "route-info",
+        "description": "<B>Left turn before road bridge</B><BR/>Turn left on the footpath, keeping the lake on your right.",
+        "sourceType": "Transition Zone",
+        "sourceSymbol": "Transition Zone"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.40709,
+          41.78653
+        ]
+      },
+      "properties": {
+        "name": "Up and out of the park",
+        "type": "route-info",
+        "description": "<B>Up and out of the park</B><BR/>Instead of following the trail around its U-turn, continue straight up the grassy hill and cross the street onto Marion Ave.",
+        "sourceType": "Transition Zone",
+        "sourceSymbol": "Transition Zone"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3811,
+          41.78622
+        ]
+      },
+      "properties": {
+        "name": "Fields Point \u2014 Finish",
+        "type": "start and finish",
+        "description": "<B>Fields Point \u2014 Finish</B><BR/>Congratulations!",
+        "sourceType": "Transition Zone",
+        "sourceSymbol": "Transition Zone"
+      }
+    }
+  ]
+}
