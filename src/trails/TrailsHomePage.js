@@ -10,6 +10,7 @@ const TrailCard = ({ trail, isFeatured }) => {
   const interactiveHref = `/trails/${trail.slug}/map`;
 
   const staticImg =
+    trail.home?.staticRouteImage?.src ||
     trail.landing?.staticRouteImage?.src ||
     trail.landing?.photos?.[0] ||
     trail.home?.photos?.[0];
@@ -35,9 +36,9 @@ const TrailCard = ({ trail, isFeatured }) => {
             alt={`${trail.displayName} route map`}
             style={{
               width: '100%',
-              height: 'auto',
-              maxHeight: isFeatured ? 280 : 240,
-              objectFit: 'cover',
+              height: isFeatured ? 320 : 260,
+              objectFit: 'contain',
+              backgroundColor: '#f7f7f7',
               borderRadius: 10,
             }}
           />
@@ -70,14 +71,25 @@ const TrailsHomePage = () => {
 
   return (
     <Container maxWidth="md" style={{ textAlign: 'center', padding: '40px' }}>
-      {featured?.home?.headline && (
-        <Typography variant="h2" component="h1" fontWeight="bold" gutterBottom>
-          {featured.home.headline}
-        </Typography>
-      )}
+      <Box
+        component="span"
+        style={{
+          position: 'absolute',
+          width: 1,
+          height: 1,
+          padding: 0,
+          margin: -1,
+          overflow: 'hidden',
+          clip: 'rect(0, 0, 0, 0)',
+          whiteSpace: 'nowrap',
+          border: 0,
+        }}
+      >
+        Providence Crosstown Trail
+      </Box>
 
       <Box display="flex" style={{ marginBottom: '20px' }} justifyContent="center">
-        <img src={logo} alt="Providence trails logo" style={{ width: '220px', height: '220px' }} />
+        <img src={logo} alt="Providence Crosstown Trail" style={{ width: '220px', height: '220px' }} />
       </Box>
 
       {intro && (

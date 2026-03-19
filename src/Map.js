@@ -8,7 +8,7 @@ import { routeLineLayer } from "./assets/data/layers.js";
 // eslint-disable-next-line
 import FakeNavigator from "./util/fake-navigator.js";
 
-const Map = ({ setShowModal, isMobile, routeGeoJson, pointsGeoJson, bounds }) => {
+const Map = ({ setShowModal, isMobile, routeGeoJson, pointsGeoJson, bounds, showUiControls = true }) => {
     const [mapState, setMapState] = useState('FREE')
     const [userLocation, setUserLocation] = useState()
     const [isFullscreen, setIsFullscreen] = useState(false)
@@ -108,16 +108,18 @@ const Map = ({ setShowModal, isMobile, routeGeoJson, pointsGeoJson, bounds }) =>
         const map = mapRef.current = new mapboxgl.Map({
             container: mapContainer.current,
             bounds,
-            hash: true,
+            hash: showUiControls,
             pitch: 56,
             zoom: 10,
             minZoom: 7
         });
 
-        map.addControl(new mapboxgl.NavigationControl({
-            showZoom: false,
-            visualizePitch: true
-        }));
+        if (showUiControls) {
+            map.addControl(new mapboxgl.NavigationControl({
+                showZoom: false,
+                visualizePitch: true
+            }));
+        }
 
         class ExtendedGeolocateControl extends mapboxgl.GeolocateControl {
             _updateCamera(position) {
@@ -125,30 +127,35 @@ const Map = ({ setShowModal, isMobile, routeGeoJson, pointsGeoJson, bounds }) =>
             }
         }
 
-        // Add geolocate control to the map.
-        const geolocateControl = new ExtendedGeolocateControl({
-            positionOptions: {
-                enableHighAccuracy: true,
-            },
-            // When active the map will receive updates to the device's location as it changes.
-            trackUserLocation: true,
-            // Draw an arrow next to the location dot to indicate which direction the device is heading.
-            showUserHeading: true,
-            // geolocation: new FakeNavigator()
-        })
+        let geolocateControl = null;
+        if (showUiControls) {
+            // Add geolocate control to the map.
+            geolocateControl = new ExtendedGeolocateControl({
+                positionOptions: {
+                    enableHighAccuracy: true,
+                },
+                // When active the map will receive updates to the device's location as it changes.
+                trackUserLocation: true,
+                // Draw an arrow next to the location dot to indicate which direction the device is heading.
+                showUserHeading: true,
+                // geolocation: new FakeNavigator()
+            })
 
-        map.addControl(
+            map.addControl(
+                geolocateControl
+            );
+
             geolocateControl
-        );
-
-        geolocateControl
-            .on('geolocate', (position) => {
-                handlePositionSuccess(position)
-            });
+                .on('geolocate', (position) => {
+                    handlePositionSuccess(position)
+                });
+        }
 
 
         map.on('load', () => {
-            geolocateControl.trigger()
+            if (geolocateControl) {
+                geolocateControl.trigger()
+            }
 
             // Set the default atmosphere style
             map.setFog({});
@@ -217,38 +224,40 @@ const Map = ({ setShowModal, isMobile, routeGeoJson, pointsGeoJson, bounds }) =>
 
     return (
         <div ref={fullscreenContainer} style={{ height: '100%', width: '100%', position: 'relative' }}>
-            <div className='absolute bottom-12 right-2.5 z-10'>
-            <div className=''>
-                <div className="mapboxgl-ctrl mapboxgl-ctrl-group">
-                    <button className="mapboxgl-ctrl-compass" type="button" aria-label="Reset bearing to north" onClick={() => {
-                        setShowModal(true)
-                    }}>
-                        <span><i className="fa-solid fa-circle-question"></i></span>
-                    </button>
-                </div>
-            </div>
-            <div className='mt-3'>
-                <div className="mapboxgl-ctrl mapboxgl-ctrl-group">
-                    <button
-                        className="mapboxgl-ctrl-compass"
-                        type="button"
-                        aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
-                        onClick={handleFullscreenButtonClick}
-                    >
-                        <span><i className={`fa-solid ${isFullscreen ? 'fa-compress' : 'fa-expand'}`}></i></span>
-                    </button>
-                </div>
-            </div>
-            {isMobile && (
-                <div className='mt-3'>
+            {showUiControls && (
+                <div className='absolute bottom-12 right-2.5 z-10'>
+                <div className=''>
                     <div className="mapboxgl-ctrl mapboxgl-ctrl-group">
-                        <button className="mapboxgl-ctrl-compass" type="button" aria-label="Reset bearing to north" onClick={handleLocationButtonClick}>
-                            <span className={`${locationArrowColorClass} -ml-0.5`}><i className="fa-solid fa-location-arrow"></i></span>
+                        <button className="mapboxgl-ctrl-compass" type="button" aria-label="Reset bearing to north" onClick={() => {
+                            setShowModal(true)
+                        }}>
+                            <span><i className="fa-solid fa-circle-question"></i></span>
                         </button>
                     </div>
                 </div>
+                <div className='mt-3'>
+                    <div className="mapboxgl-ctrl mapboxgl-ctrl-group">
+                        <button
+                            className="mapboxgl-ctrl-compass"
+                            type="button"
+                            aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+                            onClick={handleFullscreenButtonClick}
+                        >
+                            <span><i className={`fa-solid ${isFullscreen ? 'fa-compress' : 'fa-expand'}`}></i></span>
+                        </button>
+                    </div>
+                </div>
+                {isMobile && (
+                    <div className='mt-3'>
+                        <div className="mapboxgl-ctrl mapboxgl-ctrl-group">
+                            <button className="mapboxgl-ctrl-compass" type="button" aria-label="Reset bearing to north" onClick={handleLocationButtonClick}>
+                                <span className={`${locationArrowColorClass} -ml-0.5`}><i className="fa-solid fa-location-arrow"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                )}
+                </div>
             )}
-            </div>
 
             <div id="map" ref={mapContainer} className="map-container" />
         </div>

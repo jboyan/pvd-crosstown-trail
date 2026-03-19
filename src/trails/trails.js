@@ -2,18 +2,24 @@ import points from '../assets/data/points.json';
 import route from '../assets/data/route.json';
 
 import pxtWest from '../assets/img/pxt-west.png';
+import pvdCrosstownStaticMap from '../assets/img/pvd-crosstown-static-map.png';
+import { pvdCrosstownTrailPhotos } from '../assets/img/trails/pvd-crosstown-trail/photos';
 
 // Trail registry: everything the UI needs to render a trail lives here.
 // For trails where route/POIs aren't provided yet, `map` is null (the UI will show a coming-soon panel).
 export const trails = [
   {
     slug: 'pvd-crosstown-trail',
-    displayName: 'Providence Crosstown Trail',
+    displayName: 'The Providence Crosstown Trail',
     featuredOnHome: true,
     // Used for the short alias routes like `/loop` and `/west`.
     shortAlias: 'pvd',
     home: {
-      headline: 'Providence Crosstown Trail',
+      headline: 'The Providence Crosstown Trail',
+      staticRouteImage: {
+        src: pvdCrosstownStaticMap,
+        alt: 'Providence Crosstown Trail route map',
+      },
       subtitle:
         'Big walks across a small city, from summit to shore, with neighborhood and park gems along the way!',
       intro:
@@ -77,9 +83,7 @@ export const trails = [
         'The trail was inspired by the San Francisco Crosstown Trail, created by Bob Siegel. We have also drawn inspiration from Boston’s Walking City Trail and Worcester’s East-West Trail.',
         'Interactive map code by Chris Whong, developed for NYC’s Great Saunter.',
       ],
-      // Placeholder photos: there are no `photo1.jpg/photo2.jpg/photo3.jpg` assets in this repo,
-      // so we fall back to existing images. You can replace/extend these later.
-      photos: [pxtWest, pxtWest, pxtWest],
+      photos: pvdCrosstownTrailPhotos,
     },
     map: {
       routeGeoJson: route,

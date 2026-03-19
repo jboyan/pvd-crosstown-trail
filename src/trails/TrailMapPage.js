@@ -17,6 +17,7 @@ const TrailMapPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [searchParams] = useSearchParams();
   const isMobile = searchParams.get('mobile') === 'true';
+  const isStaticCapture = searchParams.get('static') === 'true';
 
   const [splashModalDismissed, setSplashModalDismissed] = useLocalStorage(
     'splashModalDismissed',
@@ -70,29 +71,38 @@ const TrailMapPage = () => {
 
   return (
     <>
-      <div className="absolute z-20 top-2 right-2">
-        <Button component={RouterLink} to="/" variant="outlined" size="small">
-          ← Back
-        </Button>
-      </div>
-      <div className="absolute z-20 h-14 w-14 top-2 left-2">
-        <img src={logo} alt="logo" />
-      </div>
+      {!isStaticCapture && (
+        <>
+          <div className="absolute z-20 top-2 right-2">
+            <Button component={RouterLink} to="/" variant="outlined" size="small">
+              ← Back
+            </Button>
+          </div>
+          <div className="absolute z-20 h-14 w-14 top-2 left-2">
+            <img src={logo} alt="logo" />
+          </div>
+        </>
+      )}
       <Map
         setShowModal={setShowModal}
         isMobile={isMobile}
         routeGeoJson={trail.map.routeGeoJson}
         pointsGeoJson={trail.map.pointsGeoJson}
         bounds={trail.map.bounds}
+        showUiControls={!isStaticCapture}
       />
-      <Modal showModal={showModal} setShowModal={setShowModal} />
-      <SplashModal
-        showModal={showSplashModal}
-        setShowModal={setShowSplashModal}
-        setDontShowAgain={(checked) => {
-          if (checked) setSplashModalDismissed(true);
-        }}
-      />
+      {!isStaticCapture && (
+        <>
+          <Modal showModal={showModal} setShowModal={setShowModal} />
+          <SplashModal
+            showModal={showSplashModal}
+            setShowModal={setShowSplashModal}
+            setDontShowAgain={(checked) => {
+              if (checked) setSplashModalDismissed(true);
+            }}
+          />
+        </>
+      )}
     </>
   );
 };

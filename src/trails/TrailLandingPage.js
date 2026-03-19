@@ -79,7 +79,7 @@ const TrailLandingPage = () => {
         </Typography>
       )}
 
-      <PhotoCarousel photos={copy?.photos} />
+      <PhotoCarousel photos={copy?.photos} fixedHeightPx={360} />
 
       {copy?.mapsHeading && <Typography variant="h4" align="left" style={{ marginBottom: '20px' }}>{copy.mapsHeading}</Typography>}
 
