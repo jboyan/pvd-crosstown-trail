@@ -6,7 +6,7 @@ import { Box, Button, Container, Typography, Link } from '@mui/material';
 import { getFeaturedTrail, trails } from './trails';
 import logo from '../assets/img/logo.svg';
 
-const TrailCard = ({ trail, isFeatured }) => {
+const TrailCard = ({ trail }) => {
   const interactiveHref = `/trails/${trail.slug}/map`;
 
   const staticImg =
@@ -20,7 +20,7 @@ const TrailCard = ({ trail, isFeatured }) => {
       style={{
         border: '1px solid rgba(0,0,0,0.12)',
         borderRadius: 12,
-        padding: isFeatured ? 24 : 16,
+        padding: 16,
         textAlign: 'center',
         background: '#fff',
       }}
@@ -36,7 +36,7 @@ const TrailCard = ({ trail, isFeatured }) => {
             alt={`${trail.displayName} route map`}
             style={{
               width: '100%',
-              height: isFeatured ? 320 : 260,
+              height: 260,
               objectFit: 'contain',
               backgroundColor: '#f7f7f7',
               borderRadius: 10,
@@ -64,7 +64,8 @@ const TrailCard = ({ trail, isFeatured }) => {
 
 const TrailsHomePage = () => {
   const featured = getFeaturedTrail();
-  const otherTrails = trails.filter((t) => t.slug !== featured?.slug);
+  const homeVisibleSlugs = new Set(['pvd-crosstown-trail', 'pvd-crosstown-west']);
+  const homeTrails = trails.filter((t) => homeVisibleSlugs.has(t.slug));
 
   const intro = featured?.home?.subtitle;
   const homeCopy = featured?.home;
@@ -98,22 +99,16 @@ const TrailsHomePage = () => {
         </Typography>
       )}
 
-      <Box style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-        {featured && <TrailCard trail={featured} isFeatured />}
-
-        {otherTrails.length > 0 && (
-          <Box
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-              gap: 16,
-            }}
-          >
-            {otherTrails.map((t) => (
-              <TrailCard key={t.slug} trail={t} />
-            ))}
-          </Box>
-        )}
+      <Box
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+          gap: 16,
+        }}
+      >
+        {homeTrails.map((trail) => (
+          <TrailCard key={trail.slug} trail={trail} />
+        ))}
       </Box>
 
       {homeCopy?.groupWalksHeading && (

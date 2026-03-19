@@ -6,16 +6,158 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [-71.4111, 41.8314], [-71.4104, 41.8315], [-71.4095, 41.831], [-71.4092, 41.8306],
-          [-71.4089, 41.8304], [-71.4088, 41.8299], [-71.4086, 41.8297], [-71.4085, 41.8295],
-          [-71.4091, 41.8295], [-71.4088, 41.8288], [-71.4087, 41.8288], [-71.4086, 41.8287],
-          [-71.4083, 41.829], [-71.408, 41.8285], [-71.4078, 41.8285], [-71.4077, 41.8283],
-          [-71.409, 41.8276], [-71.4089, 41.8277], [-71.4094, 41.8272], [-71.4086, 41.8256],
-          [-71.4069, 41.8258], [-71.4081, 41.8248], [-71.4075, 41.8251], [-71.4065, 41.826],
-          [-71.4071, 41.8266], [-71.4053, 41.8271], [-71.4039, 41.8263], [-71.4048, 41.8272],
-          [-71.4048, 41.8274], [-71.4044, 41.828], [-71.4042, 41.8289], [-71.4042, 41.8296],
-          [-71.4061, 41.8302], [-71.4038, 41.8312], [-71.4032, 41.8327], [-71.404, 41.8327],
-          [-71.4045, 41.8327], [-71.4065, 41.8318]
+          [
+            -71.4111,
+            41.8314
+          ],
+          [
+            -71.4104,
+            41.8315
+          ],
+          [
+            -71.4095,
+            41.831
+          ],
+          [
+            -71.4092,
+            41.8306
+          ],
+          [
+            -71.4089,
+            41.8304
+          ],
+          [
+            -71.4088,
+            41.8299
+          ],
+          [
+            -71.4086,
+            41.8297
+          ],
+          [
+            -71.4085,
+            41.8295
+          ],
+          [
+            -71.4091,
+            41.8295
+          ],
+          [
+            -71.4088,
+            41.8288
+          ],
+          [
+            -71.4087,
+            41.8288
+          ],
+          [
+            -71.4086,
+            41.8287
+          ],
+          [
+            -71.4083,
+            41.829
+          ],
+          [
+            -71.408,
+            41.8285
+          ],
+          [
+            -71.4078,
+            41.8285
+          ],
+          [
+            -71.4077,
+            41.8283
+          ],
+          [
+            -71.409,
+            41.8276
+          ],
+          [
+            -71.4089,
+            41.8277
+          ],
+          [
+            -71.4094,
+            41.8272
+          ],
+          [
+            -71.4086,
+            41.8256
+          ],
+          [
+            -71.4069,
+            41.8258
+          ],
+          [
+            -71.4081,
+            41.8248
+          ],
+          [
+            -71.4075,
+            41.8251
+          ],
+          [
+            -71.4065,
+            41.826
+          ],
+          [
+            -71.4071,
+            41.8266
+          ],
+          [
+            -71.4053,
+            41.8271
+          ],
+          [
+            -71.4039,
+            41.8263
+          ],
+          [
+            -71.4048,
+            41.8272
+          ],
+          [
+            -71.4048,
+            41.8274
+          ],
+          [
+            -71.4044,
+            41.828
+          ],
+          [
+            -71.4042,
+            41.8289
+          ],
+          [
+            -71.4042,
+            41.8296
+          ],
+          [
+            -71.4061,
+            41.8302
+          ],
+          [
+            -71.4038,
+            41.8312
+          ],
+          [
+            -71.4032,
+            41.8327
+          ],
+          [
+            -71.404,
+            41.8327
+          ],
+          [
+            -71.4045,
+            41.8327
+          ],
+          [
+            -71.4065,
+            41.8318
+          ]
         ]
       },
       "properties": {
@@ -25,7 +167,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4111, 41.8314] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4111,
+          41.8314
+        ]
+      },
       "properties": {
         "stop": 1,
         "name": "Roger Williams National Memorial Park",
@@ -34,7 +182,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4104, 41.8315] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4104,
+          41.8315
+        ]
+      },
       "properties": {
         "stop": 2,
         "name": "Cathedral of St. John",
@@ -43,7 +197,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4095, 41.831] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4095,
+          41.831
+        ]
+      },
       "properties": {
         "stop": 3,
         "name": "Sarah Helen Whitman House",
@@ -52,7 +212,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4092, 41.8306] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4092,
+          41.8306
+        ]
+      },
       "properties": {
         "stop": 4,
         "name": "Sullivan Dorr House",
@@ -61,7 +227,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4089, 41.8304] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4089,
+          41.8304
+        ]
+      },
       "properties": {
         "stop": 5,
         "name": "F.E. Seagrave House",
@@ -70,7 +242,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4088, 41.8299] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4088,
+          41.8299
+        ]
+      },
       "properties": {
         "stop": 6,
         "name": "Stephen Harris House ('The Shunned House')",
@@ -79,7 +257,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4086, 41.8297] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4086,
+          41.8297
+        ]
+      },
       "properties": {
         "stop": 7,
         "name": "The Old Court Bed & Breakfast",
@@ -88,7 +272,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4085, 41.8295] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4085,
+          41.8295
+        ]
+      },
       "properties": {
         "stop": 8,
         "name": "The Old State House",
@@ -97,7 +287,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4091, 41.8295] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4091,
+          41.8295
+        ]
+      },
       "properties": {
         "stop": 9,
         "name": "Benjamin Cushing House",
@@ -106,7 +302,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4088, 41.8288] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4088,
+          41.8288
+        ]
+      },
       "properties": {
         "stop": 10,
         "name": "Shakespeare's Head",
@@ -115,7 +317,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4087, 41.8288] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4087,
+          41.8288
+        ]
+      },
       "properties": {
         "stop": 11,
         "name": "The Brick Schoolhouse",
@@ -124,7 +332,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4086, 41.8287] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4086,
+          41.8287
+        ]
+      },
       "properties": {
         "stop": 12,
         "name": "Site of the Golden Ball Inn",
@@ -133,7 +347,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4083, 41.829] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4083,
+          41.829
+        ]
+      },
       "properties": {
         "stop": 13,
         "name": "Home of Franklin C. and Lillian D. Clark",
@@ -142,7 +362,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.408, 41.8285] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.408,
+          41.8285
+        ]
+      },
       "properties": {
         "stop": 14,
         "name": "The Marine Corps Arsenal",
@@ -151,7 +377,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4078, 41.8285] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4078,
+          41.8285
+        ]
+      },
       "properties": {
         "stop": 15,
         "name": "The Colonial Apartments",
@@ -160,7 +392,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4077, 41.8283] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4077,
+          41.8283
+        ]
+      },
       "properties": {
         "stop": 16,
         "name": "Benefit-Dexter House",
@@ -169,7 +407,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.409, 41.8276] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.409,
+          41.8276
+        ]
+      },
       "properties": {
         "stop": 17,
         "name": "Providence Art Club",
@@ -178,7 +422,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4089, 41.8277] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4089,
+          41.8277
+        ]
+      },
       "properties": {
         "stop": 18,
         "name": "Fleur de Lys Studio",
@@ -187,7 +437,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4094, 41.8272] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4094,
+          41.8272
+        ]
+      },
       "properties": {
         "stop": 19,
         "name": "First Baptist Meetinghouse",
@@ -196,7 +452,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4086, 41.8256] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4086,
+          41.8256
+        ]
+      },
       "properties": {
         "stop": 20,
         "name": "Market House",
@@ -205,7 +467,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4069, 41.8258] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4069,
+          41.8258
+        ]
+      },
       "properties": {
         "stop": 21,
         "name": "Providence County Superior Courthouse",
@@ -214,7 +482,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4081, 41.8248] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4081,
+          41.8248
+        ]
+      },
       "properties": {
         "stop": 22,
         "name": "Joseph Brown House",
@@ -223,7 +497,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4075, 41.8251] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4075,
+          41.8251
+        ]
+      },
       "properties": {
         "stop": 23,
         "name": "Stephen Hopkins House",
@@ -232,16 +512,28 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4065, 41.826] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4065,
+          41.826
+        ]
+      },
       "properties": {
         "stop": 24,
-        "name": "Providence Athenæum",
+        "name": "Providence Athen\u00e6um",
         "description": "251 Benefit Street (1836-37). A frequent haunt of Lovecraft's, where Poe courted Sarah Helen Whitman."
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4071, 41.8266] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4071,
+          41.8266
+        ]
+      },
       "properties": {
         "stop": 25,
         "name": "Pendleton House",
@@ -250,7 +542,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4053, 41.8271] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4053,
+          41.8271
+        ]
+      },
       "properties": {
         "stop": 26,
         "name": "List Art Building",
@@ -259,7 +557,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4039, 41.8263] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4039,
+          41.8263
+        ]
+      },
       "properties": {
         "stop": 27,
         "name": "Van Wickle Gates and Brown University",
@@ -268,7 +572,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4048, 41.8272] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4048,
+          41.8272
+        ]
+      },
       "properties": {
         "stop": 28,
         "name": "John Hay Library",
@@ -277,7 +587,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4048, 41.8274] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4048,
+          41.8274
+        ]
+      },
       "properties": {
         "stop": 29,
         "name": "H.P. Lovecraft Memorial",
@@ -286,7 +602,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4044, 41.828] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4044,
+          41.828
+        ]
+      },
       "properties": {
         "stop": 30,
         "name": "H.P. Lovecraft Memorial Square",
@@ -295,7 +617,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4042, 41.8289] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4042,
+          41.8289
+        ]
+      },
       "properties": {
         "stop": 31,
         "name": "Samuel B. Mumford House",
@@ -304,7 +632,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4042, 41.8296] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4042,
+          41.8296
+        ]
+      },
       "properties": {
         "stop": 32,
         "name": "First Church of Christ, Scientist",
@@ -313,7 +647,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4061, 41.8302] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4061,
+          41.8302
+        ]
+      },
       "properties": {
         "stop": 33,
         "name": "Prospect Terrace",
@@ -322,7 +662,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4038, 41.8312] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4038,
+          41.8312
+        ]
+      },
       "properties": {
         "stop": 34,
         "name": "Henry Sprague House",
@@ -331,7 +677,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4032, 41.8327] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4032,
+          41.8327
+        ]
+      },
       "properties": {
         "stop": 35,
         "name": "10 Barnes Street",
@@ -340,7 +692,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.404, 41.8327] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.404,
+          41.8327
+        ]
+      },
       "properties": {
         "stop": 36,
         "name": "Little white farmhouse",
@@ -349,7 +707,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4045, 41.8327] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4045,
+          41.8327
+        ]
+      },
       "properties": {
         "stop": 37,
         "name": "Halsey House",
@@ -358,7 +722,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4065, 41.8318] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4065,
+          41.8318
+        ]
+      },
       "properties": {
         "stop": 38,
         "name": "Jenckes Street",
