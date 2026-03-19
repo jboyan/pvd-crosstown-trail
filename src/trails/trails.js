@@ -2,11 +2,75 @@ import points from '../assets/data/points.json';
 import route from '../assets/data/route.json';
 import westEndRoute from '../assets/data/pvd-crosstown-west-route.json';
 import westEndPoints from '../assets/data/pvd-crosstown-west-points.json';
+import lovecraftCollegeHill from '../assets/data/lovecrafts-college-hill.json';
 
 import pxtWest from '../assets/img/pxt-west.png';
 import pvdCrosstownStaticMap from '../assets/img/pvd-crosstown-static-map.png';
 import { pvdCrosstownTrailPhotos } from '../assets/img/trails/pvd-crosstown-trail/photos';
 import { pvdCrosstownWestPhotos } from '../assets/img/trails/pvd-crosstown-west/photos';
+
+const buildRouteGeoJson = (featureCollection) => ({
+  type: 'FeatureCollection',
+  features: (featureCollection?.features || []).filter((feature) =>
+    ['LineString', 'MultiLineString'].includes(feature?.geometry?.type)
+  ),
+});
+
+const buildPointsGeoJson = (featureCollection) => ({
+  type: 'FeatureCollection',
+  features: (featureCollection?.features || [])
+    .filter((feature) => feature?.geometry?.type === 'Point')
+    .map((feature) => {
+      const stop = feature?.properties?.stop;
+      const name = feature?.properties?.name || 'Stop';
+      const description = feature?.properties?.description || '';
+      const title = stop ? `Stop ${stop}: ${name}` : name;
+
+      return {
+        ...feature,
+        properties: {
+          ...feature.properties,
+          type: 'route-info',
+          description: description ? `<B>${title}</B><BR/>${description}` : `<B>${title}</B>`,
+        },
+      };
+    }),
+});
+
+const computeBoundsFromGeoJson = (featureCollection, paddingFactor = 0.08) => {
+  const coords = [];
+  for (const feature of featureCollection?.features || []) {
+    const geometry = feature?.geometry;
+    if (!geometry) continue;
+    if (geometry.type === 'Point') {
+      coords.push(geometry.coordinates);
+    } else if (geometry.type === 'LineString') {
+      coords.push(...geometry.coordinates);
+    } else if (geometry.type === 'MultiLineString') {
+      for (const segment of geometry.coordinates) coords.push(...segment);
+    }
+  }
+
+  if (!coords.length) return [[-71.42, 41.82], [-71.39, 41.84]];
+
+  const lons = coords.map((c) => c[0]);
+  const lats = coords.map((c) => c[1]);
+  const minLon = Math.min(...lons);
+  const maxLon = Math.max(...lons);
+  const minLat = Math.min(...lats);
+  const maxLat = Math.max(...lats);
+  const lonPad = Math.max((maxLon - minLon) * paddingFactor, 0.002);
+  const latPad = Math.max((maxLat - minLat) * paddingFactor, 0.002);
+
+  return [
+    [Number((minLon - lonPad).toFixed(6)), Number((minLat - latPad).toFixed(6))],
+    [Number((maxLon + lonPad).toFixed(6)), Number((maxLat + latPad).toFixed(6))],
+  ];
+};
+
+const lovecraftRouteGeoJson = buildRouteGeoJson(lovecraftCollegeHill);
+const lovecraftPointsGeoJson = buildPointsGeoJson(lovecraftCollegeHill);
+const lovecraftBounds = computeBoundsFromGeoJson(lovecraftCollegeHill);
 
 // Trail registry: everything the UI needs to render a trail lives here.
 // For trails where route/POIs aren't provided yet, `map` is null (the UI will show a coming-soon panel).
@@ -164,6 +228,27 @@ export const trails = [
       externalButtons: [],
     },
     map: null,
+  },
+  {
+    slug: 'lovecrafts-college-hill',
+    displayName: "Lovecraft's College Hill",
+    featuredOnHome: false,
+    shortAlias: 'lovecraft',
+    landing: {
+      headline: "Lovecraft's College Hill",
+      body:
+        "Approximate 3-mile path connecting the 38 stops of the H.P. Lovecraft walking tour on Providence's College Hill.",
+      mapsHeading: 'Maps',
+      mapsIntroPrefix: 'Explore the full route and all numbered stops on the interactive map below.',
+      mapIframeSrc: '/trails/lovecrafts-college-hill/map?embedded=true',
+      externalButtons: [],
+      photos: [],
+    },
+    map: {
+      routeGeoJson: lovecraftRouteGeoJson,
+      pointsGeoJson: lovecraftPointsGeoJson,
+      bounds: lovecraftBounds,
+    },
   },
 ];
 

@@ -1,0 +1,369 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-71.4111, 41.8314], [-71.4104, 41.8315], [-71.4095, 41.831], [-71.4092, 41.8306],
+          [-71.4089, 41.8304], [-71.4088, 41.8299], [-71.4086, 41.8297], [-71.4085, 41.8295],
+          [-71.4091, 41.8295], [-71.4088, 41.8288], [-71.4087, 41.8288], [-71.4086, 41.8287],
+          [-71.4083, 41.829], [-71.408, 41.8285], [-71.4078, 41.8285], [-71.4077, 41.8283],
+          [-71.409, 41.8276], [-71.4089, 41.8277], [-71.4094, 41.8272], [-71.4086, 41.8256],
+          [-71.4069, 41.8258], [-71.4081, 41.8248], [-71.4075, 41.8251], [-71.4065, 41.826],
+          [-71.4071, 41.8266], [-71.4053, 41.8271], [-71.4039, 41.8263], [-71.4048, 41.8272],
+          [-71.4048, 41.8274], [-71.4044, 41.828], [-71.4042, 41.8289], [-71.4042, 41.8296],
+          [-71.4061, 41.8302], [-71.4038, 41.8312], [-71.4032, 41.8327], [-71.404, 41.8327],
+          [-71.4045, 41.8327], [-71.4065, 41.8318]
+        ]
+      },
+      "properties": {
+        "name": "H.P. Lovecraft Walking Tour Route",
+        "description": "Approximate 3-mile path connecting the 38 stops of the walking tour."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4111, 41.8314] },
+      "properties": {
+        "stop": 1,
+        "name": "Roger Williams National Memorial Park",
+        "description": "Commemorating the site on which Roger Williams founded Providence in 1636."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4104, 41.8315] },
+      "properties": {
+        "stop": 2,
+        "name": "Cathedral of St. John",
+        "description": "271 North Main Street (1810). Founded in 1720 as King's Church, both Lovecraft and Poe haunted the graveyard of this church."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4095, 41.831] },
+      "properties": {
+        "stop": 3,
+        "name": "Sarah Helen Whitman House",
+        "description": "88 Benefit Street (1783-92). Home of the poetess courted by Poe."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4092, 41.8306] },
+      "properties": {
+        "stop": 4,
+        "name": "Sullivan Dorr House",
+        "description": "109 Benefit Street (1809). Sits on land that was once owned by Roger Williams, and where he was originally buried in 1683."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4089, 41.8304] },
+      "properties": {
+        "stop": 5,
+        "name": "F.E. Seagrave House",
+        "description": "119 Benefit Street. In 1933 Lovecraft nearly moved into this house instead of the Samuel B. Mumford House."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4088, 41.8299] },
+      "properties": {
+        "stop": 6,
+        "name": "Stephen Harris House ('The Shunned House')",
+        "description": "135 Benefit Street (1763). 'The Shunned House' of Lovecraft's story, which Lovecraft referred to as the Babbitt House."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4086, 41.8297] },
+      "properties": {
+        "stop": 7,
+        "name": "The Old Court Bed & Breakfast",
+        "description": "144 Benefit Street (1863). Originally built as a rectory for St. John's Episcopal Church."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4085, 41.8295] },
+      "properties": {
+        "stop": 8,
+        "name": "The Old State House",
+        "description": "150 Benefit Street (1762). From this building Rhode Island declared its independence from Great Britain on May 4, 1776."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4091, 41.8295] },
+      "properties": {
+        "stop": 9,
+        "name": "Benjamin Cushing House",
+        "description": "40 North Court Street (1737). The oldest house on College Hill; likely basis for the Dr. Elihu Whipple house."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4088, 41.8288] },
+      "properties": {
+        "stop": 10,
+        "name": "Shakespeare's Head",
+        "description": "21 Meeting Street (1772). Former post office, bookstore, and publisher of the Providence Gazette."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4087, 41.8288] },
+      "properties": {
+        "stop": 11,
+        "name": "The Brick Schoolhouse",
+        "description": "24 Meeting Street (1769). Temporary home for Brown University when it moved to Providence in 1770."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4086, 41.8287] },
+      "properties": {
+        "stop": 12,
+        "name": "Site of the Golden Ball Inn",
+        "description": "(1783) Demolished since Lovecraft's day; hosted George Washington, Thomas Jefferson, and Edgar Allan Poe."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4083, 41.829] },
+      "properties": {
+        "stop": 13,
+        "name": "Home of Franklin C. and Lillian D. Clark",
+        "description": "161 Benefit Street. This was once the home of Lovecraft's uncle and aunt."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.408, 41.8285] },
+      "properties": {
+        "stop": 14,
+        "name": "The Marine Corps Arsenal",
+        "description": "176 Benefit Street (1840). Armory of the Providence Marine Corps of Artillery."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4078, 41.8285] },
+      "properties": {
+        "stop": 15,
+        "name": "The Colonial Apartments",
+        "description": "175-185 Benefit Street (1929). Lovecraft bemoaned this modern apartment building replacing the country landscape."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4077, 41.8283] },
+      "properties": {
+        "stop": 16,
+        "name": "Benefit-Dexter House",
+        "description": "187 Benefit Street. Once the Knowles Funeral Home, where the funerals of Lovecraft and his aunt Lillian were held."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.409, 41.8276] },
+      "properties": {
+        "stop": 17,
+        "name": "Providence Art Club",
+        "description": "10 and 11 Thomas Street. Lovecraft and his aunts attended art shows here."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4089, 41.8277] },
+      "properties": {
+        "stop": 18,
+        "name": "Fleur de Lys Studio",
+        "description": "7 Thomas Street (1885). Home of artist Henry Anthony Wilcox in 'The Call of Cthulhu'."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4094, 41.8272] },
+      "properties": {
+        "stop": 19,
+        "name": "First Baptist Meetinghouse",
+        "description": "75 North Main Street (1775). The oldest Baptist church in America, founded by Roger Williams."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4086, 41.8256] },
+      "properties": {
+        "stop": 20,
+        "name": "Market House",
+        "description": "4 South Main Street (1773-74). Site of the 'Providence Tea Party' in 1775."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4069, 41.8258] },
+      "properties": {
+        "stop": 21,
+        "name": "Providence County Superior Courthouse",
+        "description": "250 Benefit Street. Immense building housing the State Supreme Court and other offices."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4081, 41.8248] },
+      "properties": {
+        "stop": 22,
+        "name": "Joseph Brown House",
+        "description": "50 South Main Street (1774). Occupied by the Providence Bank, the oldest in New England."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4075, 41.8251] },
+      "properties": {
+        "stop": 23,
+        "name": "Stephen Hopkins House",
+        "description": "15 Hopkins Street. Home of the first Chancellor of Brown University and signer of the Declaration of Independence."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4065, 41.826] },
+      "properties": {
+        "stop": 24,
+        "name": "Providence Athenæum",
+        "description": "251 Benefit Street (1836-37). A frequent haunt of Lovecraft's, where Poe courted Sarah Helen Whitman."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4071, 41.8266] },
+      "properties": {
+        "stop": 25,
+        "name": "Pendleton House",
+        "description": "232 Benefit Street (1904-08). First museum in the US to have an American wing; frequently visited by Lovecraft."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4053, 41.8271] },
+      "properties": {
+        "stop": 26,
+        "name": "List Art Building",
+        "description": "Lovecraft's final home was moved from this location in 1959 to make way for the List Art Building."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4039, 41.8263] },
+      "properties": {
+        "stop": 27,
+        "name": "Van Wickle Gates and Brown University",
+        "description": "Opened twice a year for incoming students and outgoing graduates."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4048, 41.8272] },
+      "properties": {
+        "stop": 28,
+        "name": "John Hay Library",
+        "description": "20 Prospect Street (1910). Holds the largest collection of Lovecraft manuscripts."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4048, 41.8274] },
+      "properties": {
+        "stop": 29,
+        "name": "H.P. Lovecraft Memorial",
+        "description": "Erected in 1990 near the John Hay Library."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4044, 41.828] },
+      "properties": {
+        "stop": 30,
+        "name": "H.P. Lovecraft Memorial Square",
+        "description": "Intersection plaque honoring Lovecraft, installed in 2013."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4042, 41.8289] },
+      "properties": {
+        "stop": 31,
+        "name": "Samuel B. Mumford House",
+        "description": "65 Prospect Street (1825). Lovecraft's final home; home of Robert Blake in 'The Haunter of the Dark'."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4042, 41.8296] },
+      "properties": {
+        "stop": 32,
+        "name": "First Church of Christ, Scientist",
+        "description": "High site used for a warning beacon against the British in 1775."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4061, 41.8302] },
+      "properties": {
+        "stop": 33,
+        "name": "Prospect Terrace",
+        "description": "75 Congdon Street (1867). A favorite haunt of Lovecraft; current resting place of Roger Williams."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4038, 41.8312] },
+      "properties": {
+        "stop": 34,
+        "name": "Henry Sprague House",
+        "description": "100 Prospect Street. Address used for the Ward house in 'The Case of Charles Dexter Ward'."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4032, 41.8327] },
+      "properties": {
+        "stop": 35,
+        "name": "10 Barnes Street",
+        "description": "Lovecraft's home from April 1926 to May 1933; home of Dr. Marinus Bicknell Willett in 'The Case of Charles Dexter Ward'."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.404, 41.8327] },
+      "properties": {
+        "stop": 36,
+        "name": "Little white farmhouse",
+        "description": "A colonial home mentioned in 'The Case of Charles Dexter Ward'."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4045, 41.8327] },
+      "properties": {
+        "stop": 37,
+        "name": "Halsey House",
+        "description": "140 Prospect Street (1801). Served as the physical Ward house in 'The Case of Charles Dexter Ward'."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4065, 41.8318] },
+      "properties": {
+        "stop": 38,
+        "name": "Jenckes Street",
+        "description": "One of the steepest streets on College Hill; better walked down than up!"
+      }
+    }
+  ]
+}
