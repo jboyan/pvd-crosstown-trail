@@ -8,10 +8,7 @@ import { routeLineLayer } from "./assets/data/layers.js";
 // eslint-disable-next-line
 import FakeNavigator from "./util/fake-navigator.js";
 
-import points from './assets/data/points.json'
-import route from './assets/data/route.json'
-
-const Map = ({ setShowModal, isMobile }) => {
+const Map = ({ setShowModal, isMobile, routeGeoJson, pointsGeoJson, bounds }) => {
     const [mapState, setMapState] = useState('FREE')
     const [userLocation, setUserLocation] = useState()
 
@@ -64,14 +61,13 @@ const Map = ({ setShowModal, isMobile }) => {
     // initialize the map
     useEffect(() => {
         if (mapRef.current) return; // initialize map only once
+        if (!routeGeoJson || !pointsGeoJson || !bounds) return;
 
         mapboxgl.accessToken = 'pk.eyJ1Ijoic2hvcmV3YWxrZXIiLCJhIjoiY2xjdjd3NDNvMGZ4dDNyb2V6M3lod25sMSJ9.xfUWxjoeyD7beoCBIvN1xQ';
 
         const map = mapRef.current = new mapboxgl.Map({
             container: mapContainer.current,
-            bounds: [
-		[-71.495732,41.782303],[-71.374274,41.846864]
-            ],
+            bounds,
             hash: true,
             pitch: 56,
             zoom: 10,
@@ -119,13 +115,13 @@ const Map = ({ setShowModal, isMobile }) => {
 
             map.addSource('segments', {
                 type: 'geojson',
-                data: route
+                data: routeGeoJson
             })
   
 
             map.addLayer(routeLineLayer)
 
-            const sortedPoints = points.features.sort((a, b) => {
+            const sortedPoints = pointsGeoJson.features.sort((a, b) => {
                 if (a.geometry.coordinates[1] > b.geometry.coordinates[1]) {
                     return -1
                 }

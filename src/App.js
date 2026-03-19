@@ -7,6 +7,13 @@ import SplashModal from './SplashModal'
 import Map from './Map'
 import logo from './assets/img/logo.svg'
 import useLocalStorage from "./util/use-localstorage";
+import points from './assets/data/points.json'
+import route from './assets/data/route.json'
+
+const defaultBounds = [
+  [-71.495732, 41.782303],
+  [-71.374274, 41.846864],
+]
 
 function App() {
 
@@ -25,7 +32,13 @@ function App() {
             <div className="absolute z-20 h-14 w-14 top-2 left-2">
                 <img src={logo} alt="logo"/>
             </div>
-            <Map setShowModal={setShowModal} isMobile={isMobile}/>
+            <Map
+              setShowModal={setShowModal}
+              isMobile={isMobile}
+              routeGeoJson={route}
+              pointsGeoJson={points}
+              bounds={defaultBounds}
+            />
             <Modal showModal={showModal} setShowModal={setShowModal}/>
             <SplashModal
                 showModal={showSplashModal}

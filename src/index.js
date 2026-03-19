@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {createBrowserRouter, Navigate, RouterProvider,} from "react-router-dom";
 
-import App from './App';
 import NotFound from './NotFound';
 
 import reportWebVitals from './reportWebVitals';
@@ -15,8 +14,9 @@ import '@fontsource/roboto/700.css';
 import '/node_modules/mapbox-gl/dist/mapbox-gl.css'
 import './index.css';
 import {createTheme, CssBaseline, ThemeProvider} from "@mui/material";
-import Home from "./crosstown/home";
-import CrosstownWest from './crosstown/CrosstownWest';
+import TrailLandingPage from './trails/TrailLandingPage';
+import TrailMapPage from './trails/TrailMapPage';
+import TrailsHomePage from './trails/TrailsHomePage';
 
 const theme = createTheme({
     palette: {
@@ -44,31 +44,38 @@ const theme = createTheme({
     },
 });
 
-function CrosstownHome() {
-    return (
-        <ThemeProvider theme={theme}>
-            <CssBaseline/> {/* Ensures consistent styling across browsers */}
-            <Home/>
-        </ThemeProvider>
-    );
-}
-
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Navigate to="/crosstown" replace/>,
+        element: <TrailsHomePage/>,
+    },
+    {
+        path: "/trails/:slug",
+        element: <TrailLandingPage/>,
+    },
+    {
+        path: "/trails/:slug/map",
+        element: <TrailMapPage/>,
+    },
+    {
+        path: "/loop",
+        element: <Navigate to="/trails/pvd-crosstown-loop" replace/>,
+    },
+    {
+        path: "/west",
+        element: <Navigate to="/trails/pvd-crosstown-west" replace/>,
     },
     {
         path: "/crosstown",
-        element: <CrosstownHome/>,
+        element: <Navigate to="/" replace/>,
     },
     {
         path: "/crosstown/map",
-        element: <App/>,
+        element: <Navigate to="/trails/pvd-crosstown/map" replace/>,
     },
     {
         path: "/crosstown-west",
-        element: <CrosstownWest/>,
+        element: <Navigate to="/trails/pvd-crosstown-west" replace/>,
     },
     {
         path: "*",  // Wildcard route for unmatched paths
@@ -79,7 +86,10 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <RouterProvider router={router}/>
+        <ThemeProvider theme={theme}>
+            <CssBaseline /> {/* Ensures consistent styling across browsers */}
+            <RouterProvider router={router}/>
+        </ThemeProvider>
     </React.StrictMode>
 );
 

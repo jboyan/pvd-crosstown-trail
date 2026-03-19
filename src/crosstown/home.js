@@ -1,6 +1,25 @@
 import {Box, Button, Container, Link, List, ListItem, Typography} from "@mui/material";
 import {Link as RouterLink} from 'react-router-dom';
 import logo from '../assets/img/logo.svg'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+// Carousel images
+import img1 from '../assets/img/photo1.jpg';
+import img2 from '../assets/img/photo2.jpg';
+import img3 from '../assets/img/photo3.jpg';
+
+const photos = [img1, img2, img3];
+
+const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true
+};
 
 export default function Home() {
     return (
@@ -19,32 +38,6 @@ export default function Home() {
                 A big walk across a small city, from summit to shore, with neighborhood and park gems along
                 the way!
             </Typography>
-
-            <Box
-                border={2}
-                borderColor="primary.main"
-                borderRadius={2}
-                padding={3}
-                marginBottom={3}
-                display="inline-block"
-                textAlign="center"
-            >
-                <Typography variant="body1" gutterBottom>
-                    Experience the Crosstown Trail with others on Saturday, September 27! We will actually be walking
-                    a variant of the route—the <Link component={RouterLink} to="/crosstown-west"><b>PVD Crosstown Trail
-                    West End edition</b></Link>—in order to make stops at two artist events happening that day.
-                </Typography>
-                <Box mb={2}/>
-                <Button
-                    variant="contained"
-                    style={{marginBottom: '10px'}}
-                    target="_blank"
-                    component="a"
-                    href="https://ppsri.org/events/walk-the-pvd-crosstown-trail-a-13-mile-urban-hike/"
-                >
-                    Join our second Public Hike on Saturday, September 27
-                </Button>
-            </Box>
 
             <Typography variant="body1" style={{textAlign: 'left', marginBottom: '20px'}}>
                 Inspired by the San Francisco Crosstown Trail, this 13-mile walking route traverses the city of
@@ -107,6 +100,39 @@ export default function Home() {
                     component="a" href="https://connect.garmin.com/modern/course/310808963">
                 View on Garmin Connect
             </Button>
+
+
+            <Typography variant="h4" style={{textAlign: 'left', marginBottom: '20px'}}>Group Walks</Typography>
+
+            <Box style={{margin: '40px 0'}}>
+                <Slider {...sliderSettings}>
+                    {photos.map((src, idx) => (
+                        <img
+                            key={idx}
+                            src={src}
+                            alt={`Trail photo ${idx + 1}`}
+                            style={{width: '100%', height: 'auto', borderRadius: 8}}
+                        />
+                    ))}
+                </Slider>
+            </Box>
+            
+            <Typography variant="body1" style={{textAlign: 'left', marginLeft: '20px', marginBottom: '20px'}}>
+                The Providence Preservation Society organized group walks of the trail in 2024 and 2025.
+                Experience the Crosstown Trail with others on Saturday, September 27! We will actually be walking
+                a variant of the route—the <Link component={RouterLink} to="/crosstown-west"><b>PVD Crosstown Trail
+                West End edition</b></Link>—in order to make stops at two artist events happening that day.
+                <Box mb={2}/>
+                <Button
+                    variant="contained"
+                    style={{marginBottom: '10px'}}
+                    target="_blank"
+                    component="a"
+                    href="https://ppsri.org/events/walk-the-pvd-crosstown-trail-a-13-mile-urban-hike/"
+                >
+                    Join our second Public Hike on Saturday, September 27
+                </Button>
+            </Typography>
 
             <Typography variant="h4" style={{textAlign: 'left', marginBottom: '20px'}}>Credits</Typography>
 
