@@ -71,7 +71,14 @@ const TrailsHomePage = () => {
   const homeCopy = featured?.home;
 
   return (
-    <Container maxWidth="md" style={{ textAlign: 'center', padding: '40px' }}>
+    <Container
+      maxWidth="md"
+      sx={{
+        textAlign: 'center',
+        px: { xs: 2, sm: 3, md: 5 },
+        py: { xs: 3, md: 5 },
+      }}
+    >
       <Box
         component="span"
         style={{
@@ -100,10 +107,10 @@ const TrailsHomePage = () => {
       )}
 
       <Box
-        style={{
+        sx={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-          gap: 16,
+          gridTemplateColumns: { xs: '1fr', md: 'repeat(2, minmax(0, 1fr))' },
+          gap: 2,
         }}
       >
         {homeTrails.map((trail) => (
