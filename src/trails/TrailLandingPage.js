@@ -50,6 +50,10 @@ const TrailLandingPage = () => {
   const { slug } = useParams();
   const trail = getTrailBySlug(slug);
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
+
   if (!trail) {
     return (
       <Container maxWidth="md" style={{ padding: 24 }}>

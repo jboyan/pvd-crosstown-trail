@@ -227,7 +227,7 @@ export const trails = [
         alt: 'Providence Crosstown Trail—South Edition route map',
       },
       intro:
-        'A 9-mile-long southern variant of the PXT. This route follows a relatively direct path from Neutaconkanut Park through Roger Williams Park to Fields Point, allowing a fuller exploration of all three.',
+        'A more direct, southern variant of the PXT. This route includes deeper explorations of Neutaconkanut Park, Roger Williams Parks, and Fields Point. Highlights of the 9-mile route include:',
       parks: [
         'Neutaconkanut Hill - summit and trail system',
         'Scalabrini Piazza, Cerbo Square, and Silver Lake Memorial Park',
