@@ -129,13 +129,12 @@ const TrailsHomePage = () => {
           {(() => {
             const crosstownHref = homeCopy.groupWalksCta?.crosstownHref;
             const westHref = homeCopy.groupWalksCta?.westEditionHref;
-            const listingsHref = homeCopy.groupWalksCta?.eventListingsHref;
 
-            if (!crosstownHref || !westHref || !listingsHref) {
+            if (!crosstownHref || !westHref) {
               return homeCopy.groupWalksBody;
             }
 
-            const parts = homeCopy.groupWalksBody.split(/(\{\{crosstownTrail\}\}|\{\{westEndEdition\}\}|\{\{eventListings\}\})/g);
+            const parts = homeCopy.groupWalksBody.split(/(\{\{crosstownTrail\}\}|\{\{westEndEdition\}\})/g);
             return parts.map((part, idx) => {
               if (part === '{{crosstownTrail}}') {
                 return (
@@ -151,17 +150,24 @@ const TrailsHomePage = () => {
                   </Link>
                 );
               }
-              if (part === '{{eventListings}}') {
-                return (
-                  <Link key={`gw-events-${idx}`} href={listingsHref} target="_blank" rel="noreferrer">
-                    their event listings
-                  </Link>
-                );
-              }
               return <React.Fragment key={`gw-text-${idx}`}>{part}</React.Fragment>;
             });
           })()}
         </Typography>
+      )}
+
+      {homeCopy?.groupWalksCta?.href && (
+        <Box style={{ textAlign: 'left', marginLeft: '20px', marginBottom: '20px' }}>
+          <Button
+            variant="contained"
+            component="a"
+            href={homeCopy.groupWalksCta.href}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {homeCopy.groupWalksCta.label || 'REGISTER'}
+          </Button>
+        </Box>
       )}
 
     </Container>

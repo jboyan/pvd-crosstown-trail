@@ -138,15 +138,14 @@ export const trails = [
       ],
       groupWalksHeading: 'Group Walks',
       groupWalksBody:
-        'The Providence Preservation Society organized group walks of the {{crosstownTrail}} in 2024 and the {{westEndEdition}} in 2025. Follow {{eventListings}} to find out about our 2026 plans!',
+        'The Providence Preservation Society organized group walks of the {{crosstownTrail}} in 2024 and the {{westEndEdition}} in 2025. Our 2026 edition of the walk will follow the South Edition of the trail and be held on Saturday, May 23.',
       groupWalksCta: {
-        label: 'Join our second Public Hike on Saturday, September 27',
+        label: 'REGISTER FOR MAY 23',
         href:
-          'https://ppsri.org/events/walk-the-pvd-crosstown-trail-a-13-mile-urban-hike/',
+          'https://ppsri.org/events/walk-the-pvd-crosstown-trail-a-13-mile-urban-hike-2/',
         // Internal link to the West End landing page.
         westEditionHref: '/trails/pvd-crosstown-west',
         crosstownHref: '/trails/pvd-crosstown-trail',
-        eventListingsHref: 'https://ppsri.org/upcoming-events/',
       },
       creditsHeading: 'Credits',
       creditsLines: [
