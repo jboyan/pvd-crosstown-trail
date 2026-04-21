@@ -12,10 +12,27 @@
       },
       "properties": {
         "name": "Igliozzi Rec Center \u2014 Start",
-        "type": "route-info",
+        "type": "start and finish",
         "description": "<B>Igliozzi Rec Center \u2014 Start</B><BR/>Welcome to the Providence Crosstown Trail! Start by walking behind and around the skate park. Behind the skate park, go up the short grassy slope to join the park trail, and turn left.",
         "sourceType": "Transition Zone",
         "sourceSymbol": "Transition Zone"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.46314,
+          41.81195
+        ]
+      },
+      "properties": {
+        "name": "WPA path (paved)",
+        "type": "route-info",
+        "description": "<B>WPA path (paved)</B>",
+        "sourceType": "Generic",
+        "sourceSymbol": "Generic"
       }
     },
     {
@@ -45,11 +62,45 @@
         ]
       },
       "properties": {
-        "name": "Waypoint",
+        "name": "Pinnacle Trail (orange)",
         "type": "route-info",
-        "description": "<B>Waypoint</B><BR/>Cross the road to the old ski slope (now a sledding hill), then follow the walkway down, not the road.",
-        "sourceType": "Alert",
-        "sourceSymbol": "Alert"
+        "description": "<B>Pinnacle Trail (orange)</B>",
+        "sourceType": "Trailhead",
+        "sourceSymbol": "Trailhead"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.46703,
+          41.80793
+        ]
+      },
+      "properties": {
+        "name": "Blueberry Trail (blue)",
+        "type": "route-info",
+        "description": "<B>Blueberry Trail (blue)</B>",
+        "sourceType": "Generic",
+        "sourceSymbol": "Generic"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.46566,
+          41.8071
+        ]
+      },
+      "properties": {
+        "name": "King Monument",
+        "type": "route-info",
+        "description": "<B>King Monument</B><BR/>1905 monument by Abby King in honor of her family, which included Governor Samuel Ward King (1839-43).",
+        "sourceType": "Monument",
+        "sourceSymbol": "Monument"
       }
     },
     {
@@ -91,6 +142,23 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -71.45702,
+          41.80655
+        ]
+      },
+      "properties": {
+        "name": "Silver Lake Memorial Park",
+        "type": "route-info",
+        "description": "<B>Silver Lake Memorial Park</B>",
+        "sourceType": "Monument",
+        "sourceSymbol": "Monument"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -71.44332,
           41.80142
         ]
@@ -125,14 +193,48 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -71.43556,
+          41.79345
+        ]
+      },
+      "properties": {
+        "name": "Mashapaug Pond Park",
+        "type": "route-info",
+        "description": "<B>Mashapaug Pond Park</B>",
+        "sourceType": "Park",
+        "sourceSymbol": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.43474,
+          41.78963
+        ]
+      },
+      "properties": {
+        "name": "Murphy Trainor Park",
+        "type": "route-info",
+        "description": "<B>Murphy Trainor Park</B>",
+        "sourceType": "Park",
+        "sourceSymbol": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -71.43313,
           41.78984
         ]
       },
       "properties": {
-        "name": "Garvin House + Caliente Taqueria",
+        "name": "Garvin House",
         "type": "refreshments",
-        "description": "<B>Garvin House + Caliente Taqueria</B><BR/>373 Reservoir Ave",
+        "description": "<B>Garvin House</B><BR/>373 Reservoir Ave",
         "sourceType": "Restaurant",
         "sourceSymbol": "Restaurant"
       }
@@ -142,16 +244,84 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -71.3811,
-          41.78622
+          -71.42009,
+          41.78586
         ]
       },
       "properties": {
-        "name": "Fields Point \u2014 Finish",
-        "type": "start and finish",
-        "description": "<B>Fields Point \u2014 Finish</B><BR/>Congratulations!",
-        "sourceType": "Transition Zone",
-        "sourceSymbol": "Transition Zone"
+        "name": "Joseph Williams Field",
+        "type": "route-info",
+        "description": "<B>Joseph Williams Field</B>",
+        "sourceType": "Park",
+        "sourceSymbol": "Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.41355,
+          41.78079
+        ]
+      },
+      "properties": {
+        "name": "Temple to Music",
+        "type": "route-info",
+        "description": "<B>Temple to Music</B>",
+        "sourceType": "Monument",
+        "sourceSymbol": "Monument"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.40403,
+          41.78418
+        ]
+      },
+      "properties": {
+        "name": "Oakland Cemetery",
+        "type": "route-info",
+        "description": "<B>Oakland Cemetery</B>",
+        "sourceType": "Monument",
+        "sourceSymbol": "Monument"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.38598,
+          41.78544
+        ]
+      },
+      "properties": {
+        "name": "Fields Point wind turbines",
+        "type": "route-info",
+        "description": "<B>Fields Point wind turbines</B>",
+        "sourceType": "Monument",
+        "sourceSymbol": "Monument"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.38285406593718,
+          41.78517162195442
+        ]
+      },
+      "properties": {
+        "name": "End at Save the Bay Center",
+        "type": "route-info",
+        "description": "<B>End at Save the Bay Center</B>",
+        "sourceType": "Segment End",
+        "sourceSymbol": "Segment End"
       }
     }
   ]

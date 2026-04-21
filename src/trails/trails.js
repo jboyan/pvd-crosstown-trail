@@ -256,8 +256,8 @@ export const trails = [
       routeGeoJson: southEditionRoute,
       pointsGeoJson: southEditionPoints,
       bounds: [
-        [-71.475206, 41.770327],
-        [-71.375934, 41.816043],
+        [-71.475204, 41.770327],
+        [-71.375966, 41.816043],
       ],
     },
   },
