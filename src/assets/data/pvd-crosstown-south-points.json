@@ -1,0 +1,158 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.46247,
+          41.8114
+        ]
+      },
+      "properties": {
+        "name": "Igliozzi Rec Center \u2014 Start",
+        "type": "route-info",
+        "description": "<B>Igliozzi Rec Center \u2014 Start</B><BR/>Welcome to the Providence Crosstown Trail! Start by walking behind and around the skate park. Behind the skate park, go up the short grassy slope to join the park trail, and turn left.",
+        "sourceType": "Transition Zone",
+        "sourceSymbol": "Transition Zone"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.46561,
+          41.81157
+        ]
+      },
+      "properties": {
+        "name": "Summit",
+        "type": "route-info",
+        "description": "<B>Summit</B><BR/>Nice view of downtown \u2014 the halfway point of your trek!",
+        "sourceType": "Peak",
+        "sourceSymbol": "Peak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.46691,
+          41.81095
+        ]
+      },
+      "properties": {
+        "name": "Waypoint",
+        "type": "route-info",
+        "description": "<B>Waypoint</B><BR/>Cross the road to the old ski slope (now a sledding hill), then follow the walkway down, not the road.",
+        "sourceType": "Alert",
+        "sourceSymbol": "Alert"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.45854,
+          41.80782
+        ]
+      },
+      "properties": {
+        "name": "Scalabrini Piazza",
+        "type": "route-info",
+        "description": "<B>Scalabrini Piazza</B>",
+        "sourceType": "Attraction",
+        "sourceSymbol": "Attraction"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.45701,
+          41.80775
+        ]
+      },
+      "properties": {
+        "name": "Cerbo Square",
+        "type": "route-info",
+        "description": "<B>Cerbo Square</B>",
+        "sourceType": "Generic",
+        "sourceSymbol": "Generic"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.44332,
+          41.80142
+        ]
+      },
+      "properties": {
+        "name": "Start of Washington Secondary Rail Trail",
+        "type": "start and finish",
+        "description": "<B>Start of Washington Secondary Rail Trail</B>",
+        "sourceType": "Trailhead",
+        "sourceSymbol": "Trailhead"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.43905,
+          41.79609
+        ]
+      },
+      "properties": {
+        "name": "Lang's Bowlarama",
+        "type": "restrooms",
+        "description": "<B>Lang's Bowlarama</B><BR/>Restrooms, food, and bowling",
+        "sourceType": "Restroom",
+        "sourceSymbol": "Restroom"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.43313,
+          41.78984
+        ]
+      },
+      "properties": {
+        "name": "Garvin House + Caliente Taqueria",
+        "type": "refreshments",
+        "description": "<B>Garvin House + Caliente Taqueria</B><BR/>373 Reservoir Ave",
+        "sourceType": "Restaurant",
+        "sourceSymbol": "Restaurant"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3811,
+          41.78622
+        ]
+      },
+      "properties": {
+        "name": "Fields Point \u2014 Finish",
+        "type": "start and finish",
+        "description": "<B>Fields Point \u2014 Finish</B><BR/>Congratulations!",
+        "sourceType": "Transition Zone",
+        "sourceSymbol": "Transition Zone"
+      }
+    }
+  ]
+}

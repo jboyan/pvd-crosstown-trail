@@ -2,10 +2,13 @@ import points from '../assets/data/points.json';
 import route from '../assets/data/route.json';
 import westEndRoute from '../assets/data/pvd-crosstown-west-route.json';
 import westEndPoints from '../assets/data/pvd-crosstown-west-points.json';
+import southEditionRoute from '../assets/data/pvd-crosstown-south-route.json';
+import southEditionPoints from '../assets/data/pvd-crosstown-south-points.json';
 import lovecraftCollegeHill from '../assets/data/lovecrafts-college-hill.json';
 
 import pxtWest from '../assets/img/pxt-west.png';
 import pvdCrosstownStaticMap from '../assets/img/pvd-crosstown-static-map.png';
+import pvdCrosstownSouthStaticMap from '../assets/img/pvd-crosstown-south-static-map.jpg';
 import { pvdCrosstownTrailPhotos } from '../assets/img/trails/pvd-crosstown-trail/photos';
 import { pvdCrosstownWestPhotos } from '../assets/img/trails/pvd-crosstown-west/photos';
 
@@ -209,6 +212,53 @@ export const trails = [
       bounds: [
         [-71.469568, 41.78265],
         [-71.378472, 41.82476],
+      ],
+    },
+  },
+  {
+    slug: 'pvd-crosstown-south',
+    displayName: 'Providence Crosstown Trail—South Edition',
+    featuredOnHome: false,
+    shortAlias: 'south',
+    landing: {
+      headline: 'Providence Crosstown Trail—South Edition',
+      photos: [],
+      staticRouteImage: {
+        src: pvdCrosstownSouthStaticMap,
+        alt: 'Providence Crosstown Trail—South Edition route map',
+      },
+      intro:
+        'A 9-mile-long southern variant of the PXT. This route follows a relatively direct path from Neutaconkanut Park through Roger Williams Park to Fields Point, allowing a fuller exploration of all three.',
+      parks: [
+        'Neutaconkanut Hill - summit and trail system',
+        'Scalabrini Piazza, Cerbo Square, and Silver Lake Memorial Park',
+        'The trailhead of the 24-mile Washington Secondary Bike Path',
+        'Mashapaug Pond Park',
+        'Murphy Trainor Park',
+        'Garvin House',
+        'Joseph Williams Field',
+        'Roger Williams Park: Temple to Music and Cunliff, Elm, and Edgewood Lakes',
+        'Oakland Cemetery',
+        'Fields Point windmills',
+        'Save the Bay Center',
+      ],
+      mapsHeading: 'Maps',
+      mapsIntroPrefix: 'Explore this route with the interactive map below.',
+      mapIframeSrc: '/trails/pvd-crosstown-south/map?embedded=true',
+      externalButtons: [
+        {
+          label: 'View on Strava',
+          href: 'https://www.strava.com/routes/3471296535661608320',
+          variant: 'outlined',
+        },
+      ],
+    },
+    map: {
+      routeGeoJson: southEditionRoute,
+      pointsGeoJson: southEditionPoints,
+      bounds: [
+        [-71.475206, 41.770327],
+        [-71.375934, 41.816043],
       ],
     },
   },

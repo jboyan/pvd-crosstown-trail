@@ -64,7 +64,7 @@ const TrailCard = ({ trail }) => {
 
 const TrailsHomePage = () => {
   const featured = getFeaturedTrail();
-  const homeVisibleSlugs = new Set(['pvd-crosstown-trail', 'pvd-crosstown-west']);
+  const homeVisibleSlugs = new Set(['pvd-crosstown-trail', 'pvd-crosstown-west', 'pvd-crosstown-south']);
   const homeTrails = trails.filter((t) => homeVisibleSlugs.has(t.slug));
 
   const intro = featured?.home?.subtitle;
