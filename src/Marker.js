@@ -22,6 +22,16 @@ export const markerAttributes = [
     color: 'orange'
   },
   {
+    type: 'start',
+    iconClass: 'fa-solid fa-flag',
+    color: '#2e7d32'
+  },
+  {
+    type: 'finish',
+    iconClass: 'fa-solid fa-flag-checkered',
+    color: 'orange'
+  },
+  {
     type: 'start and finish',
     iconClass: 'fa-solid fa-flag-checkered',
     color: 'orange'

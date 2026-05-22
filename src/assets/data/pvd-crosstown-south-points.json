@@ -12,7 +12,7 @@
       },
       "properties": {
         "name": "Igliozzi Rec Center \u2014 Start",
-        "type": "start and finish",
+        "type": "start",
         "description": "<B>Igliozzi Rec Center \u2014 Start</B><BR/>Welcome to the Providence Crosstown Trail! Start by walking behind and around the skate park. Behind the skate park, go up the short grassy slope to join the park trail, and turn left.",
         "sourceType": "Transition Zone",
         "sourceSymbol": "Transition Zone"
@@ -142,16 +142,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -71.45702,
-          41.80655
+          -71.45303,
+          41.80824
         ]
       },
       "properties": {
-        "name": "Silver Lake Memorial Park",
+        "name": "St. Bartholomew's Church",
         "type": "route-info",
-        "description": "<B>Silver Lake Memorial Park</B>",
-        "sourceType": "Monument",
-        "sourceSymbol": "Monument"
+        "description": "<B>St. Bartholomew's Church</B>",
+        "sourceType": "Attraction",
+        "sourceSymbol": "Attraction"
       }
     },
     {
@@ -159,14 +159,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -71.44332,
-          41.80142
+          -71.44312,
+          41.80219
         ]
       },
       "properties": {
         "name": "Start of Washington Secondary Rail Trail",
-        "type": "start and finish",
-        "description": "<B>Start of Washington Secondary Rail Trail</B>",
+        "type": "route-info",
+        "description": "<B>Start of Washington Secondary Rail Trail</B><BR/>To the south, a lovely 19-mile rail trail. To the north, a littered dirt path ending at an abandoned train tunnel full of garbage.",
         "sourceType": "Trailhead",
         "sourceSymbol": "Trailhead"
       }
@@ -193,8 +193,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -71.43556,
-          41.79345
+          -71.4366,
+          41.79378
+        ]
+      },
+      "properties": {
+        "name": "Park concession stand",
+        "type": "restrooms",
+        "description": "<B>Park concession stand</B><BR/>Rest rooms and concessions open during baseball games.",
+        "sourceType": "Restroom",
+        "sourceSymbol": "Restroom"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.43579,
+          41.79389
         ]
       },
       "properties": {
@@ -211,7 +228,7 @@
         "type": "Point",
         "coordinates": [
           -71.43474,
-          41.78963
+          41.78964
         ]
       },
       "properties": {
@@ -232,11 +249,11 @@
         ]
       },
       "properties": {
-        "name": "Garvin House",
-        "type": "refreshments",
-        "description": "<B>Garvin House</B><BR/>373 Reservoir Ave",
-        "sourceType": "Restaurant",
-        "sourceSymbol": "Restaurant"
+        "name": "Garvin House - lunch stop",
+        "type": "restrooms",
+        "description": "<B>Garvin House - lunch stop</B><BR/>373 Reservoir Ave",
+        "sourceType": "Restroom",
+        "sourceSymbol": "Restroom"
       }
     },
     {
@@ -244,16 +261,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -71.42009,
-          41.78586
+          -71.41801,
+          41.7858
         ]
       },
       "properties": {
-        "name": "Joseph Williams Field",
+        "name": "Victorian Rose Garden",
         "type": "route-info",
-        "description": "<B>Joseph Williams Field</B>",
-        "sourceType": "Park",
-        "sourceSymbol": "Park"
+        "description": "<B>Victorian Rose Garden</B>",
+        "sourceType": "Attraction",
+        "sourceSymbol": "Attraction"
       }
     },
     {
@@ -261,16 +278,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -71.41355,
-          41.78079
+          -71.41646,
+          41.78551
         ]
       },
       "properties": {
-        "name": "Temple to Music",
+        "name": "Betsey Williams Sycamore Tree",
         "type": "route-info",
-        "description": "<B>Temple to Music</B>",
-        "sourceType": "Monument",
-        "sourceSymbol": "Monument"
+        "description": "<B>Betsey Williams Sycamore Tree</B>",
+        "sourceType": "Attraction",
+        "sourceSymbol": "Attraction"
       }
     },
     {
@@ -278,8 +295,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -71.40403,
-          41.78418
+          -71.4074,
+          41.78263
+        ]
+      },
+      "properties": {
+        "name": "Botanic Center / Goats!",
+        "type": "restrooms",
+        "description": "<B>Botanic Center / Goats!</B>",
+        "sourceType": "Restroom",
+        "sourceSymbol": "Restroom"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.40426,
+          41.78417
         ]
       },
       "properties": {
@@ -318,7 +352,7 @@
       },
       "properties": {
         "name": "End at Save the Bay Center",
-        "type": "route-info",
+        "type": "finish",
         "description": "<B>End at Save the Bay Center</B>",
         "sourceType": "Segment End",
         "sourceSymbol": "Segment End"
