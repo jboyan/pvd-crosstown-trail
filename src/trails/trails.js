@@ -8,7 +8,7 @@ import lovecraftCollegeHill from '../assets/data/lovecrafts-college-hill.json';
 
 import pxtWest from '../assets/img/pxt-west.png';
 import pvdCrosstownStaticMap from '../assets/img/pvd-crosstown-static-map.png';
-import pvdCrosstownSouthStaticMap from '../assets/img/pvd-crosstown-south-static-map.jpg';
+import pvdCrosstownSouthStaticMap from '../assets/img/pvd-crosstown-south-static-map-2025-05.jpg';
 import { pvdCrosstownTrailPhotos } from '../assets/img/trails/pvd-crosstown-trail/photos';
 import { pvdCrosstownWestPhotos } from '../assets/img/trails/pvd-crosstown-west/photos';
 
