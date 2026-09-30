@@ -75,11 +75,16 @@ const lovecraftRouteGeoJson = buildRouteGeoJson(lovecraftCollegeHill);
 const lovecraftPointsGeoJson = buildPointsGeoJson(lovecraftCollegeHill);
 const lovecraftBounds = computeBoundsFromGeoJson(lovecraftCollegeHill);
 
+const crosstownLengthMiles = 13.5;
+const westEndLengthMiles = 12;
+const southEditionLengthMiles = 8.5;
+
 // Trail registry: everything the UI needs to render a trail lives here.
 // For trails where route/POIs aren't provided yet, `map` is null (the UI will show a coming-soon panel).
 export const trails = [
   {
     slug: 'pvd-crosstown-trail',
+    lengthMiles: crosstownLengthMiles,
     displayName: 'The Providence Crosstown Trail',
     featuredOnHome: true,
     // Used for the short alias routes like `/loop` and `/west`.
@@ -93,7 +98,7 @@ export const trails = [
       subtitle:
         'Big walks across a small city, from summit to shore, with neighborhood and park gems along the way!',
       intro:
-        'Inspired by the San Francisco Crosstown Trail, this 13-mile walking route traverses the city of Providence, visiting both well-known landmarks and quiet neighborhoods. Follow the sidewalks of Silver Lake, Hartford, Olneyville, Manton, Mt. Pleasant, Smith Hill, downtown, the Jewelry District, South Providence, Elmwood, and Washington Park, as well as off-road paths through these parks:',
+        `Inspired by the San Francisco Crosstown Trail, this ${crosstownLengthMiles}-mile walking route traverses the city of Providence, visiting both well-known landmarks and quiet neighborhoods. Follow the sidewalks of Silver Lake, Hartford, Olneyville, Manton, Mt. Pleasant, Smith Hill, downtown, the Jewelry District, South Providence, Elmwood, and Washington Park, as well as off-road paths through these parks:`,
       parks: [
         'Neutaconkanut Hill',
         'Merino Park',
@@ -112,7 +117,7 @@ export const trails = [
         'This route was newly established in 2024 and is a work in progress. We welcome your feedback!',
       mapsHeading: 'Maps',
       mapsIntroPrefix:
-        'Follow the path using the map below. The full 13.4-mile route starts at the Igliozzi Rec Center (675 Plainfield Street) and ends at Fields Point (100 Save the Bay Drive). To shorten the walk, you can start or end downtown at Van Leesten Memorial Bridge (334 South Water Street).',
+        `Follow the path using the map below. The full ${crosstownLengthMiles}-mile route starts at the Igliozzi Rec Center (675 Plainfield Street) and ends at Fields Point (100 Save the Bay Drive). To shorten the walk, you can start or end downtown at Van Leesten Memorial Bridge (334 South Water Street).`,
       mapIframeSrc: '/trails/pvd-crosstown-trail/map?embedded=true',
       externalButtons: [
         {
@@ -167,6 +172,7 @@ export const trails = [
   },
   {
     slug: 'pvd-crosstown-west',
+    lengthMiles: westEndLengthMiles,
     displayName: 'Providence Crosstown Trail—West End Edition',
     featuredOnHome: false,
     shortAlias: 'west',
@@ -174,7 +180,7 @@ export const trails = [
       headline: 'Providence Crosstown Trail—West End Edition',
       photos: pvdCrosstownWestPhotos,
       body:
-        'This 12-mile "West End" variant of the Providence Crosstown Trail heads east from Olneyville through Providence’s West End, down to Roger Williams Park and the waterfront.',
+        `This ${westEndLengthMiles}-mile "West End" variant of the Providence Crosstown Trail heads east from Olneyville through Providence’s West End, down to Roger Williams Park and the waterfront.`,
       parks: [
         'Neutaconkanut Hill',
         'Merino Park',
@@ -203,7 +209,7 @@ export const trails = [
       routeStartText:
         'Like the original Crosstown Trail, the route starts at the Igliozzi Rec Center (675 Plainfield Street) and ends at Fields Point (100 Save the Bay Drive).',
       routeShortenText:
-        'The full walk is 12 miles long. For a shorter walk, you can start or end at our lunch spot, which will be approximately at noon at Urban Greens Co-op Market (93 Cranston Street).',
+        `The full walk is ${westEndLengthMiles} miles long. For a shorter walk, you can start or end at our lunch spot, which will be approximately at noon at Urban Greens Co-op Market (93 Cranston Street).`,
     },
     map: {
       routeGeoJson: westEndRoute,
@@ -216,6 +222,7 @@ export const trails = [
   },
   {
     slug: 'pvd-crosstown-south',
+    lengthMiles: southEditionLengthMiles,
     displayName: 'Providence Crosstown Trail—South Edition',
     featuredOnHome: false,
     shortAlias: 'south',
@@ -227,7 +234,7 @@ export const trails = [
         alt: 'Providence Crosstown Trail—South Edition route map',
       },
       intro:
-        'A more direct, southern variant of the PXT. This route includes deeper explorations of Neutaconkanut Park, Roger Williams Parks, and Fields Point. Highlights of the 9-mile route include:',
+        `A more direct, southern variant of the PXT. This route includes deeper explorations of Neutaconkanut Park, Roger Williams Parks, and Fields Point. Highlights of the ${southEditionLengthMiles}-mile route include:`,
       parks: [
         'Neutaconkanut Hill - summit and trail system',
         'Scalabrini Piazza, Cerbo Square, and St. Bartholomew\'s Church',

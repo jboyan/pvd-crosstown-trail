@@ -25,9 +25,19 @@ const TrailCard = ({ trail }) => {
         background: '#fff',
       }}
     >
-      <Typography variant="h5" style={{ marginBottom: 8, fontWeight: 900 }}>
+      <Typography variant="h5" style={{ marginBottom: trail.lengthMiles ? 4 : 8, fontWeight: 900 }}>
         {trail.displayName}
       </Typography>
+
+      {trail.lengthMiles && (
+        <Typography
+          variant="subtitle2"
+          color="text.secondary"
+          style={{ letterSpacing: '0.08em', textTransform: 'uppercase' }}
+        >
+          {trail.lengthMiles} miles
+        </Typography>
+      )}
 
       {staticImg && (
         <Box style={{ margin: '12px 0' }}>
