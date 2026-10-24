@@ -74,6 +74,10 @@ const router = createBrowserRouter([
         element: <Navigate to="/trails/pvd-crosstown-south" replace/>,
     },
     {
+        path: "/west-nov",
+        element: <Navigate to="/trails/pvd-crosstown-west-nov-2026" replace/>,
+    },
+    {
         path: "/lovecraft",
         element: <Navigate to="/trails/lovecrafts-college-hill" replace/>,
     },

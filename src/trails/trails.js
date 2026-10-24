@@ -4,11 +4,14 @@ import westEndRoute from '../assets/data/pvd-crosstown-west-route.json';
 import westEndPoints from '../assets/data/pvd-crosstown-west-points.json';
 import southEditionRoute from '../assets/data/pvd-crosstown-south-route.json';
 import southEditionPoints from '../assets/data/pvd-crosstown-south-points.json';
+import westNov2026Route from '../assets/data/pvd-crosstown-west-nov-2026-route.json';
+import westNov2026Points from '../assets/data/pvd-crosstown-west-nov-2026-points.json';
 import lovecraftCollegeHill from '../assets/data/lovecrafts-college-hill.json';
 
 import pxtWest from '../assets/img/pxt-west.png';
 import pvdCrosstownStaticMap from '../assets/img/pvd-crosstown-static-map.png';
 import pvdCrosstownSouthStaticMap from '../assets/img/pvd-crosstown-south-static-map-2025-05.jpg';
+import pvdCrosstownWestNov2026StaticMap from '../assets/img/pvd-crosstown-west-nov-2026-static-map.jpg';
 import { pvdCrosstownTrailPhotos } from '../assets/img/trails/pvd-crosstown-trail/photos';
 import { pvdCrosstownWestPhotos } from '../assets/img/trails/pvd-crosstown-west/photos';
 
@@ -78,6 +81,7 @@ const lovecraftBounds = computeBoundsFromGeoJson(lovecraftCollegeHill);
 const crosstownLengthMiles = 13.5;
 const westEndLengthMiles = 12;
 const southEditionLengthMiles = 8.5;
+const westNov2026LengthMiles = 11;
 
 // Trail registry: everything the UI needs to render a trail lives here.
 // For trails where route/POIs aren't provided yet, `map` is null (the UI will show a coming-soon panel).
@@ -142,15 +146,35 @@ export const trails = [
         },
       ],
       groupWalksHeading: 'Group Walks',
-      groupWalksBody:
-        'The Providence Preservation Society organized group walks of the {{crosstownTrail}} in 2024 and the {{westEndEdition}} in 2025. Our 2026 edition of the walk will follow the South Edition of the trail and be held on Saturday, May 23.',
+      groupWalksIntro:
+        'The Providence Preservation Society organizes regular group walks of the trail, with route variations to keep things interesting:',
+      groupWalksItems: [
+        {
+          date: 'September 2024',
+          routeLabel: 'original Crosstown Trail',
+          href: '/trails/pvd-crosstown-trail',
+        },
+        {
+          date: 'September 2025',
+          routeLabel: 'via West End',
+          href: '/trails/pvd-crosstown-west',
+        },
+        {
+          date: 'May 2026',
+          routeLabel: 'via Mashapaug Pond',
+          href: '/trails/pvd-crosstown-south',
+        },
+        {
+          date: 'November 7, 2026',
+          routeLabel: 'via West End',
+          href: '/trails/pvd-crosstown-west-nov-2026',
+          upcoming: true,
+        },
+      ],
       groupWalksCta: {
-        label: 'REGISTER FOR MAY 23',
+        label: 'REGISTER FOR NOVEMBER 7!',
         href:
-          'https://ppsri.org/events/walk-the-pvd-crosstown-trail-a-13-mile-urban-hike-2/',
-        // Internal link to the West End landing page.
-        westEditionHref: '/trails/pvd-crosstown-west',
-        crosstownHref: '/trails/pvd-crosstown-trail',
+          'https://ppsri.org/events/walk-the-pvd-crosstown-trail-new-west-edition-a-10-5-mile-urban-hike/',
       },
       creditsHeading: 'Credits',
       creditsLines: [
@@ -173,11 +197,11 @@ export const trails = [
   {
     slug: 'pvd-crosstown-west',
     lengthMiles: westEndLengthMiles,
-    displayName: 'Providence Crosstown Trail—West End Edition',
+    displayName: 'Providence Crosstown Trail via West End, September 2025',
     featuredOnHome: false,
     shortAlias: 'west',
     landing: {
-      headline: 'Providence Crosstown Trail—West End Edition',
+      headline: 'Providence Crosstown Trail via West End, September 2025',
       photos: pvdCrosstownWestPhotos,
       body:
         `This ${westEndLengthMiles}-mile "West End" variant of the Providence Crosstown Trail heads east from Olneyville through Providence’s West End, down to Roger Williams Park and the waterfront.`,
@@ -223,15 +247,15 @@ export const trails = [
   {
     slug: 'pvd-crosstown-south',
     lengthMiles: southEditionLengthMiles,
-    displayName: 'Providence Crosstown Trail—South Edition',
+    displayName: 'Providence Crosstown Trail via Mashapaug Pond, May 2026',
     featuredOnHome: false,
     shortAlias: 'south',
     landing: {
-      headline: 'Providence Crosstown Trail—South Edition',
+      headline: 'Providence Crosstown Trail via Mashapaug Pond, May 2026',
       photos: [],
       staticRouteImage: {
         src: pvdCrosstownSouthStaticMap,
-        alt: 'Providence Crosstown Trail—South Edition route map',
+        alt: 'Providence Crosstown Trail via Mashapaug Pond, May 2026 route map',
       },
       intro:
         `A more direct, southern variant of the PXT. This route includes deeper explorations of Neutaconkanut Park, Roger Williams Parks, and Fields Point. Highlights of the ${southEditionLengthMiles}-mile route include:`,
@@ -264,6 +288,58 @@ export const trails = [
       bounds: [
         [-71.475204, 41.779604],
         [-71.375966, 41.815356],
+      ],
+    },
+  },
+  {
+    slug: 'pvd-crosstown-west-nov-2026',
+    lengthMiles: westNov2026LengthMiles,
+    displayName: 'Providence Crosstown Trail via West End, November 2026',
+    featuredOnHome: false,
+    shortAlias: 'west-nov',
+    landing: {
+      headline: 'Providence Crosstown Trail via West End, November 2026',
+      photos: [],
+      staticRouteImage: {
+        src: pvdCrosstownWestNov2026StaticMap,
+        alt: 'Providence Crosstown Trail via West End, November 2026 route map',
+      },
+      intro:
+        `A variant of the PXT that goes through Olneyville and the West End. Highlights of the ${westNov2026LengthMiles}-mile route include:`,
+      parks: [
+        'Neutaconkanut Hill',
+        'Merino Park',
+        'Woonasquatucket River Greenway',
+        'Donigian Park',
+        'Dexter Training Ground',
+        'Pearl Street, Annie Morris, and Sayles Playgrounds',
+        'Roger Williams Park',
+        'Columbia Park',
+        'JWU Harborside Campus',
+        'Fields Point windmills',
+        'Save the Bay Center',
+      ],
+      mapsHeading: 'Maps',
+      mapsIntroPrefix: 'Explore this route with the interactive map below.',
+      mapIframeSrc: '/trails/pvd-crosstown-west-nov-2026/map?embedded=true',
+      externalButtons: [
+        {
+          label: 'View on Strava',
+          href: 'https://www.strava.com/routes/3547002957866177460',
+          variant: 'outlined',
+        },
+      ],
+      routeStartText:
+        'Like the original Crosstown Trail, the route starts at the Igliozzi Rec Center (675 Plainfield Street) and ends at Fields Point (100 Save the Bay Drive).',
+      routeShortenText:
+        `The full walk is ${westNov2026LengthMiles} miles long. For a shorter walk, you can start or end at the lunch spot at Urban Greens Co-op Market (93 Cranston Street).`,
+    },
+    map: {
+      routeGeoJson: westNov2026Route,
+      pointsGeoJson: westNov2026Points,
+      bounds: [
+        [-71.473865, 41.781601],
+        [-71.374175, 41.825809],
       ],
     },
   },

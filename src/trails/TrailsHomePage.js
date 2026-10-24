@@ -74,7 +74,12 @@ const TrailCard = ({ trail }) => {
 
 const TrailsHomePage = () => {
   const featured = getFeaturedTrail();
-  const homeVisibleSlugs = new Set(['pvd-crosstown-trail', 'pvd-crosstown-west', 'pvd-crosstown-south']);
+  const homeVisibleSlugs = new Set([
+    'pvd-crosstown-trail',
+    'pvd-crosstown-west',
+    'pvd-crosstown-south',
+    'pvd-crosstown-west-nov-2026',
+  ]);
   const homeTrails = trails.filter((t) => homeVisibleSlugs.has(t.slug));
 
   const intro = featured?.home?.subtitle;
@@ -134,36 +139,38 @@ const TrailsHomePage = () => {
         </Typography>
       )}
 
-      {homeCopy?.groupWalksBody && (
-        <Typography variant="body1" style={{ textAlign: 'left', marginLeft: '20px', marginBottom: '20px' }}>
-          {(() => {
-            const crosstownHref = homeCopy.groupWalksCta?.crosstownHref;
-            const westHref = homeCopy.groupWalksCta?.westEditionHref;
-
-            if (!crosstownHref || !westHref) {
-              return homeCopy.groupWalksBody;
-            }
-
-            const parts = homeCopy.groupWalksBody.split(/(\{\{crosstownTrail\}\}|\{\{westEndEdition\}\})/g);
-            return parts.map((part, idx) => {
-              if (part === '{{crosstownTrail}}') {
-                return (
-                  <Link key={`gw-crosstown-${idx}`} component={RouterLink} to={crosstownHref}>
-                    <b>Providence Crosstown Trail</b>
-                  </Link>
-                );
-              }
-              if (part === '{{westEndEdition}}') {
-                return (
-                  <Link key={`gw-west-${idx}`} component={RouterLink} to={westHref}>
-                    <b>West End Edition</b>
-                  </Link>
-                );
-              }
-              return <React.Fragment key={`gw-text-${idx}`}>{part}</React.Fragment>;
-            });
-          })()}
-        </Typography>
+      {(homeCopy?.groupWalksIntro || homeCopy?.groupWalksItems?.length) && (
+        <Box style={{ textAlign: 'left', marginLeft: '20px', marginBottom: '20px' }}>
+          {homeCopy.groupWalksIntro && (
+            <Typography variant="body1" style={{ marginBottom: 8 }}>
+              {homeCopy.groupWalksIntro}
+            </Typography>
+          )}
+          {homeCopy.groupWalksItems?.length > 0 && (
+            <Box
+              component="ul"
+              sx={{
+                m: 0,
+                pl: 3,
+                '& li': { mb: 0.75 },
+              }}
+            >
+              {homeCopy.groupWalksItems.map((item) => (
+                <Typography component="li" variant="body1" key={`${item.date}-${item.routeLabel}`}>
+                  {item.upcoming ? <b>Upcoming — {item.date}</b> : item.date}
+                  {': '}
+                  {item.href ? (
+                    <Link component={RouterLink} to={item.href}>
+                      {item.routeLabel}
+                    </Link>
+                  ) : (
+                    item.routeLabel
+                  )}
+                </Typography>
+              ))}
+            </Box>
+          )}
+        </Box>
       )}
 
       {homeCopy?.groupWalksCta?.href && (
