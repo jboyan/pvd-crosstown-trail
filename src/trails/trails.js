@@ -156,7 +156,7 @@ export const trails = [
         },
         {
           date: 'September 2025',
-          routeLabel: 'via West End',
+          routeLabel: 'via Columbus Square',
           href: '/trails/pvd-crosstown-west',
         },
         {
@@ -197,11 +197,11 @@ export const trails = [
   {
     slug: 'pvd-crosstown-west',
     lengthMiles: westEndLengthMiles,
-    displayName: 'Providence Crosstown Trail via West End, September 2025',
+    displayName: 'Providence Crosstown Trail via Columbus Square, September 2025',
     featuredOnHome: false,
     shortAlias: 'west',
     landing: {
-      headline: 'Providence Crosstown Trail via West End, September 2025',
+      headline: 'Providence Crosstown Trail via Columbus Square, September 2025',
       photos: pvdCrosstownWestPhotos,
       body:
         `This ${westEndLengthMiles}-mile "West End" variant of the Providence Crosstown Trail heads east from Olneyville through Providence’s West End, down to Roger Williams Park and the waterfront.`,
@@ -311,6 +311,7 @@ export const trails = [
         'Merino Park',
         'Woonasquatucket River Greenway',
         'Donigian Park',
+        'Wedding Cake House',
         'Dexter Training Ground',
         'Pearl Street, Annie Morris, and Sayles Playgrounds',
         'Roger Williams Park',
